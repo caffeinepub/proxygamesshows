@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "A website named zakariasadeq7site123 featuring a web proxy, unblocked/proxy-style online games (inspired by Hypcal/Totally Science), and popular TV shows streaming section (including Breaking Bad and others via YouTube embeds). Branding updated to zakariasadeq7site123 throughout.",
+  "projectStateVersion": 11,
+  "summary": "A website named zakariasadeq7site123 featuring a web proxy, unblocked/proxy-style online games, TV shows/movies streaming, an Apps section with cloaked iframe access to TikTok/Snapchat/Instagram/YouTube/Discord/Twitter, and a Hacks section with game cheats, browser tricks, keyboard shortcuts, and tech hacks. UI is being redesigned to match an EDUrocks-style 2-column card grid layout with dark maroon/near-black background and neon blue accent color. Adding Music and Live TV sections. All 7 sections accessible from navigation.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
@@ -77,6 +77,102 @@
         "REQ-10"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-redesign-the-overall-ui-to-closely-match-the-totally-science-aesthetic-use-a-very-dark-near-black-background-0a0a0f-or-similar-bold-neon-accent-colors-electric-green-and-or-cyan-chunky-rounded-card-components-with-glowing-neon-borders-on-hover-large-stylized-section-headers-with-neon-glow-text-effects-a-grid-heavy-layout-with-tight-spacing-and-a-retro-futuristic-gaming-atmosphere-throughout-apply-consistently-across-all-sections",
+      "title": "Redesign the overall UI to closely match the Totally Science aesthetic: use a very dark near-black background (#0a0a0f or similar), bold neon accent colors (electric green and/or cyan), chunky rounded card components with glowing neon borders on hover, large stylized section headers with neon glow text effects, a grid-heavy layout with tight spacing, and a retro-futuristic/gaming atmosphere throughout. Apply consistently across all sections.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reorganize-the-site-layout-into-exactly-3-clearly-separated-sections-with-updated-navigation-1-games-2-tv-shows-movies-and-3-proxy-update-the-navigation-component-to-show-these-3-labels-games-shows-proxy-update-herosection-cta-buttons-to-link-to-these-same-3-sections-ensure-each-section-has-a-bold-stylized-section-header-with-an-icon-emoji-prefix-and-neon-glow-styling",
+      "title": "Reorganize the site layout into exactly 3 clearly separated sections with updated navigation: (1) 🎮 Games, (2) 📺 TV Shows & Movies, and (3) 🌐 Proxy. Update the Navigation component to show these 3 labels (Games, Shows, Proxy). Update HeroSection CTA buttons to link to these same 3 sections. Ensure each section has a bold, stylized section header with an icon/emoji prefix and neon glow styling.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-gamessection-to-display-all-games-existing-new-in-a-responsive-grid-with-totally-science-style-chunky-game-cards-each-card-should-show-a-thumbnail-or-emoji-fallback-title-a-short-genre-category-tag-badge-and-a-glowing-play-now-button-retain-the-existing-gameplayer-modal-for-in-page-playback",
+      "title": "Update GamesSection to display all games (existing + new) in a responsive grid with Totally Science-style chunky game cards. Each card should show a thumbnail or emoji fallback, title, a short genre/category tag badge, and a glowing 'Play Now' button. Retain the existing GamePlayer modal for in-page playback.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-showssection-to-display-all-shows-and-movies-existing-new-in-a-responsive-grid-rename-the-section-header-to-tv-shows-movies-each-card-shows-a-thumbnail-or-emoji-fallback-title-short-description-and-a-glowing-watch-now-button-retain-the-existing-videoplayer-modal-for-trailer-embed-playback",
+      "title": "Update ShowsSection to display all shows and movies (existing + new) in a responsive grid. Rename the section header to 'TV Shows & Movies'. Each card shows a thumbnail or emoji fallback, title, short description, and a glowing 'Watch Now' button. Retain the existing VideoPlayer modal for trailer/embed playback.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-apps-section-to-the-site-featuring-tiktok-snapchat-instagram-youtube-discord-and-twitter-x-each-app-is-represented-as-a-neon-styled-card-matching-the-totally-science-dark-theme-showing-the-app-name-an-emoji-icon-fallback-and-an-open-button-clicking-the-button-loads-the-app-url-inside-the-existing-iframe-proxy-mechanism-so-the-address-bar-shows-the-site-s-own-domain-cloaked-not-the-external-app-url",
+      "title": "Add a new Apps section to the site featuring TikTok, Snapchat, Instagram, YouTube, Discord, and Twitter/X. Each app is represented as a neon-styled card matching the Totally Science dark theme, showing the app name, an emoji/icon fallback, and an Open button. Clicking the button loads the app URL inside the existing iframe proxy mechanism so the address bar shows the site's own domain (cloaked), not the external app URL.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-hacks-section-to-the-site-displaying-a-variety-of-hacks-as-styled-cards-include-at-least-8-hacks-across-four-categories-game-cheats-tips-browser-tricks-keyboard-shortcuts-and-tech-life-hacks-each-card-shows-a-category-badge-a-short-hack-title-and-a-concise-description-use-the-same-chunky-rounded-neon-border-on-hover-card-style-as-other-sections",
+      "title": "Add a new Hacks section to the site displaying a variety of hacks as styled cards. Include at least 8 hacks across four categories: game cheats/tips, browser tricks, keyboard shortcuts, and tech/life hacks. Each card shows a category badge, a short hack title, and a concise description. Use the same chunky rounded neon-border-on-hover card style as other sections.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navigation-bar-to-include-links-to-the-two-new-sections-apps-and-hacks-alongside-the-existing-games-shows-and-proxy-links-update-the-herosection-cta-buttons-to-also-include-apps-and-hacks-so-all-5-sections-are-accessible-from-the-hero-ensure-the-mobile-collapsible-menu-also-includes-the-two-new-links-and-active-section-highlighting-works-for-all-sections",
+      "title": "Update the Navigation bar to include links to the two new sections Apps and Hacks alongside the existing Games, Shows, and Proxy links. Update the HeroSection CTA buttons to also include Apps and Hacks so all 5 sections are accessible from the hero. Ensure the mobile collapsible menu also includes the two new links and active section highlighting works for all sections.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-entire-site-ui-to-match-the-edurocks-layout-shown-in-the-uploaded-screenshots-a-dark-maroon-near-black-background-approximately-1a0a1a-or-0f0a14-a-2-column-responsive-card-grid-as-the-primary-homepage-layout-each-section-card-featuring-a-large-rounded-square-icon-badge-a-bold-section-title-and-a-short-description-beneath-it-replace-all-current-neon-green-cyan-accents-with-neon-blue-00bfff-electric-blue-for-icon-badge-backgrounds-card-hover-borders-text-highlights-buttons-and-glow-effects-apply-this-redesign-consistently-across-navigation-herosection-all-section-cards-and-footer",
+      "title": "Redesign the entire site UI to match the EDUrocks layout shown in the uploaded screenshots: a dark maroon/near-black background (approximately #1a0a1a or #0f0a14), a 2-column responsive card grid as the primary homepage layout, each section card featuring a large rounded-square icon badge, a bold section title, and a short description beneath it. Replace all current neon green/cyan accents with neon blue (#00bfff / electric blue) for icon badge backgrounds, card hover borders, text highlights, buttons, and glow effects. Apply this redesign consistently across Navigation, HeroSection, all section cards, and Footer.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-homepage-section-card-grid-to-include-all-7-sections-visible-across-the-uploaded-edurocks-screenshots-games-proxy-movies-tv-music-apps-hacks-and-live-tv-each-represented-as-a-large-2-column-card-with-a-neon-blue-rounded-square-icon-emoji-fallback-acceptable-a-bold-title-and-a-short-descriptive-subtitle-clicking-a-card-should-smooth-scroll-to-the-corresponding-section-on-the-page",
+      "title": "Update the homepage section card grid to include all 7 sections visible across the uploaded EDUrocks screenshots — Games, Proxy, Movies & TV, Music, Apps, Hacks, and Live TV — each represented as a large 2-column card with a neon blue rounded-square icon (emoji fallback acceptable), a bold title, and a short descriptive subtitle. Clicking a card should smooth-scroll to the corresponding section on the page.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-music-section-to-the-page-anchor-id-music-display-a-grid-of-embedded-music-radio-player-cards-featuring-at-least-6-publicly-accessible-music-or-internet-radio-stream-embeds-e-g-lofi-girl-youtube-live-stream-somafm-radiogarden-nts-radio-bbc-radio-1-kexp-each-card-shows-a-neon-blue-styled-icon-badge-station-stream-name-a-short-description-and-a-play-listen-button-that-loads-the-embed-in-an-iframe-overlay-or-inline-player-style-the-section-header-with-neon-blue-glow-text-matching-the-new-edurocks-inspired-theme",
+      "title": "Add a new Music section to the page (anchor id='music'). Display a grid of embedded music/radio player cards featuring at least 6 publicly accessible music or internet radio stream embeds (e.g., Lofi Girl YouTube live stream, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP). Each card shows a neon blue styled icon badge, station/stream name, a short description, and a Play/Listen button that loads the embed in an iframe overlay or inline player. Style the section header with neon blue glow text matching the new EDUrocks-inspired theme.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-live-tv-section-to-the-page-anchor-id-livetv-display-a-grid-of-at-least-6-publicly-accessible-live-tv-channel-embeds-e-g-nasa-tv-abc-news-live-cbs-news-bloomberg-tv-dw-news-france-24-all-of-which-offer-free-public-youtube-live-embeds-or-direct-iframe-embeds-each-card-shows-a-neon-blue-icon-badge-channel-name-short-description-and-a-watch-live-button-that-loads-the-channel-embed-in-an-iframe-overlay-style-the-section-header-with-neon-blue-glow-text",
+      "title": "Add a new Live TV section to the page (anchor id='livetv'). Display a grid of at least 6 publicly accessible live TV channel embeds (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24 — all of which offer free public YouTube live embeds or direct iframe embeds). Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button that loads the channel embed in an iframe overlay. Style the section header with neon blue glow text.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navigation-bar-to-include-links-to-all-7-sections-in-this-order-games-proxy-movies-tv-music-apps-hacks-live-tv-update-the-herosection-cta-buttons-and-or-the-homepage-section-card-grid-to-link-to-all-7-sections-ensure-the-mobile-hamburger-menu-also-lists-all-7-links-and-active-section-highlighting-uses-neon-blue-for-the-selected-link",
+      "title": "Update the Navigation bar to include links to all 7 sections in this order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV. Update the HeroSection CTA buttons and/or the homepage section card grid to link to all 7 sections. Ensure the mobile hamburger menu also lists all 7 links and active section highlighting uses neon blue for the selected link.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -121,6 +217,82 @@
     {
       "id": "AR-13",
       "summary": "Update shows section to include Breaking Bad and other popular TV shows with YouTube trailer/embed links",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Add more diverse games to the existing games lineup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add more TV shows and movies to the existing shows lineup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Reorganize site layout into 3 clear categories: Games, TV Shows & Movies, and Proxy",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Redesign UI to closely match Totally Science style: bold dark theme, neon accents, chunky cards, stylized section headers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Expand the backend hardcoded games array with at least 8 additional diverse games beyond the existing unblocked lineup. Include a variety of genres (e.g., action, puzzle, arcade, racing, strategy) with titles such as Agar.io, Krunker.io, Happy Wheels, Geometry Dash, Tank Trouble, Bloons Tower Defense, Shell Shockers, and Subway Surfers. Each entry must include title, description, embedUrl, and thumbnailUrl fields.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Expand the backend hardcoded shows array with at least 8 additional popular TV shows and movies beyond the existing lineup. Include a mix of shows and movies such as Breaking Bad (if not already present), Better Call Saul, The Witcher, Dark, Narcos, Money Heist, Squid Game, and Inception. Each entry must include title, description, embedUrl (YouTube trailer), and thumbnailUrl fields.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Add Apps section featuring TikTok, Snapchat, Instagram, YouTube, Discord, and Twitter/X, each opening through the site's iframe proxy so the URL stays cloaked",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add Hacks section with styled cards featuring game cheats/tips, browser tricks, keyboard shortcuts, and tech/life hacks",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Redesign UI to match EDUrocks 2-column card grid layout with dark maroon/near-black background and neon blue (#00bfff) accent color for icons, borders, highlights, and buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add Music section with embedded music/radio player cards in the neon blue themed layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add Live TV section with publicly available live TV channel embeds in the neon blue themed layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Update navigation to include all 7 sections: Games, Proxy, Movies & TV, Apps, Hacks, Music, Live TV",
       "reqIds": [],
       "status": "pending"
     }

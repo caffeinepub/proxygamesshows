@@ -2,11 +2,102 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-rebrand-the-entire-site-to-zakariasadeq7site123-update-the-site-name-in-the-navigation-logo-herosection-headline-logo-footer-and-the-html-title-tag-in-index-html-so-that-zakariasadeq7site123-appears-consistently-everywhere-nexhub-currently-appears",
-      "featureTitle": "Rebrand the entire site to 'zakariasadeq7site123'. Update the site name in the Navigation logo, HeroSection headline/logo, Footer, and the HTML title tag in index.html so that 'zakariasadeq7site123' appears consistently everywhere 'NexHub' currently appears.",
+      "featureId": "feature-redesign-the-entire-site-ui-to-match-the-edurocks-layout-shown-in-the-uploaded-screenshots-a-dark-maroon-near-black-background-approximately-1a0a1a-or-0f0a14-a-2-column-responsive-card-grid-as-the-primary-homepage-layout-each-section-card-featuring-a-large-rounded-square-icon-badge-a-bold-section-title-and-a-short-description-beneath-it-replace-all-current-neon-green-cyan-accents-with-neon-blue-00bfff-electric-blue-for-icon-badge-backgrounds-card-hover-borders-text-highlights-buttons-and-glow-effects-apply-this-redesign-consistently-across-navigation-herosection-all-section-cards-and-footer",
+      "featureTitle": "Redesign the entire site UI to match the EDUrocks layout shown in the uploaded screenshots: a dark maroon/near-black background (approximately #1a0a1a or #0f0a14), a 2-column responsive card grid as the primary homepage layout, each section card featuring a large rounded-square icon badge, a bold section title, and a short description beneath it. Replace all current neon green/cyan accents with neon blue (#00bfff / electric blue) for icon badge backgrounds, card hover borders, text highlights, buttons, and glow effects. Apply this redesign consistently across Navigation, HeroSection, all section cards, and Footer.",
       "files": [
-        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/AppCard.tsx",
         "frontend/src/components/Footer.tsx",
+        "frontend/src/components/GameCard.tsx",
+        "frontend/src/components/HackCard.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/components/SectionCardGrid.tsx",
+        "frontend/src/components/ShowCard.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-homepage-section-card-grid-to-include-all-7-sections-visible-across-the-uploaded-edurocks-screenshots-games-proxy-movies-tv-music-apps-hacks-and-live-tv-each-represented-as-a-large-2-column-card-with-a-neon-blue-rounded-square-icon-emoji-fallback-acceptable-a-bold-title-and-a-short-descriptive-subtitle-clicking-a-card-should-smooth-scroll-to-the-corresponding-section-on-the-page",
+      "featureTitle": "Update the homepage section card grid to include all 7 sections visible across the uploaded EDUrocks screenshots — Games, Proxy, Movies & TV, Music, Apps, Hacks, and Live TV — each represented as a large 2-column card with a neon blue rounded-square icon (emoji fallback acceptable), a bold title, and a short descriptive subtitle. Clicking a card should smooth-scroll to the corresponding section on the page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SectionCardGrid.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-new-music-section-to-the-page-anchor-id-music-display-a-grid-of-embedded-music-radio-player-cards-featuring-at-least-6-publicly-accessible-music-or-internet-radio-stream-embeds-e-g-lofi-girl-youtube-live-stream-somafm-radiogarden-nts-radio-bbc-radio-1-kexp-each-card-shows-a-neon-blue-styled-icon-badge-station-stream-name-a-short-description-and-a-play-listen-button-that-loads-the-embed-in-an-iframe-overlay-or-inline-player-style-the-section-header-with-neon-blue-glow-text-matching-the-new-edurocks-inspired-theme",
+      "featureTitle": "Add a new Music section to the page (anchor id='music'). Display a grid of embedded music/radio player cards featuring at least 6 publicly accessible music or internet radio stream embeds (e.g., Lofi Girl YouTube live stream, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP). Each card shows a neon blue styled icon badge, station/stream name, a short description, and a Play/Listen button that loads the embed in an iframe overlay or inline player. Style the section header with neon blue glow text matching the new EDUrocks-inspired theme.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MusicCard.tsx",
+        "frontend/src/components/MusicPlayer.tsx",
+        "frontend/src/components/MusicSection.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-22"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-new-live-tv-section-to-the-page-anchor-id-livetv-display-a-grid-of-at-least-6-publicly-accessible-live-tv-channel-embeds-e-g-nasa-tv-abc-news-live-cbs-news-bloomberg-tv-dw-news-france-24-all-of-which-offer-free-public-youtube-live-embeds-or-direct-iframe-embeds-each-card-shows-a-neon-blue-icon-badge-channel-name-short-description-and-a-watch-live-button-that-loads-the-channel-embed-in-an-iframe-overlay-style-the-section-header-with-neon-blue-glow-text",
+      "featureTitle": "Add a new Live TV section to the page (anchor id='livetv'). Display a grid of at least 6 publicly accessible live TV channel embeds (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24 — all of which offer free public YouTube live embeds or direct iframe embeds). Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button that loads the channel embed in an iframe overlay. Style the section header with neon blue glow text.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LiveTVCard.tsx",
+        "frontend/src/components/LiveTVPlayer.tsx",
+        "frontend/src/components/LiveTVSection.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-23"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-navigation-bar-to-include-links-to-all-7-sections-in-this-order-games-proxy-movies-tv-music-apps-hacks-live-tv-update-the-herosection-cta-buttons-and-or-the-homepage-section-card-grid-to-link-to-all-7-sections-ensure-the-mobile-hamburger-menu-also-lists-all-7-links-and-active-section-highlighting-uses-neon-blue-for-the-selected-link",
+      "featureTitle": "Update the Navigation bar to include links to all 7 sections in this order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV. Update the HeroSection CTA buttons and/or the homepage section card grid to link to all 7 sections. Ensure the mobile hamburger menu also lists all 7 links and active section highlighting uses neon blue for the selected link.",
+      "files": [
         "frontend/src/components/HeroSection.tsx",
         "frontend/src/components/Navigation.tsx"
       ],
@@ -19,45 +110,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-8"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-games-section-to-feature-unblocked-proxy-style-games-inspired-by-hypcal-and-totally-science-replace-the-current-game-list-with-at-least-6-popular-unblocked-games-such-as-slope-1v1-lol-cookie-clicker-run-3-drift-hunters-and-retro-bowl-using-their-publicly-accessible-embed-or-iframe-urls-update-the-backend-hardcoded-games-array-to-reflect-these-new-entries-title-description-embed-url-thumbnail-url",
-      "featureTitle": "Update the Games section to feature unblocked/proxy-style games inspired by Hypcal and Totally Science. Replace the current game list with at least 6 popular unblocked games such as Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, and Retro Bowl, using their publicly accessible embed or iframe URLs. Update the backend hardcoded games array to reflect these new entries (title, description, embed URL, thumbnail URL).",
-      "files": [
-        "frontend/src/components/GamesSection.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-9"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-shows-section-to-include-breaking-bad-and-at-least-5-other-popular-tv-shows-e-g-the-office-game-of-thrones-stranger-things-breaking-bad-the-wire-peaky-blinders-the-sopranos-each-show-card-should-display-a-title-cover-image-or-emoji-fallback-a-short-description-and-a-watch-now-button-that-loads-an-official-youtube-trailer-or-highlight-embed-in-the-videoplayer-modal-update-the-backend-hardcoded-shows-array-to-reflect-these-new-entries",
-      "featureTitle": "Update the Shows section to include Breaking Bad and at least 5 other popular TV shows (e.g., The Office, Game of Thrones, Stranger Things, Breaking Bad, The Wire, Peaky Blinders, The Sopranos). Each show card should display a title, cover image or emoji fallback, a short description, and a Watch Now button that loads an official YouTube trailer or highlight embed in the VideoPlayer modal. Update the backend hardcoded shows array to reflect these new entries.",
-      "files": [
-        "frontend/src/components/ShowsSection.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-10"
+        "REQ-24"
       ],
       "confidence": "high"
     }

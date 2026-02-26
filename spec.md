@@ -1,13 +1,16 @@
 # Specification
 
 ## Summary
-**Goal:** Rebrand the site from "NexHub" to "zakariasadeq7site123", update the Games section with popular unblocked games, and update the Shows section with Breaking Bad and other popular TV shows.
+**Goal:** Redesign the site UI to match the EDUrocks 2-column card grid layout with a dark maroon/near-black background and neon blue accents, and add new Music and Live TV sections.
 
 **Planned changes:**
-- Replace all instances of "NexHub" with "zakariasadeq7site123" in the Navigation logo, HeroSection, Footer, and HTML title tag
-- Update the backend games array with at least 6 unblocked/proxy-style games (Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, Retro Bowl) including their embed URLs and descriptions
-- Update the frontend Games section to display the new game entries with Play Now buttons that open games in the GamePlayer modal iframe
-- Update the backend shows array with at least 6 popular TV shows including Breaking Bad, The Office, Game of Thrones, Stranger Things, The Wire, and Peaky Blinders, each with a YouTube trailer embed URL and description
-- Update the frontend Shows section to display the new show entries with Watch Now buttons that open YouTube trailers in the VideoPlayer modal
+- Replace the entire site color scheme: dark maroon/near-black background (~#1a0a1a), all accent colors (icon badges, borders, glow, buttons, active nav links) switched to neon blue (#00bfff)
+- Redesign the homepage to display a 2-column responsive card grid (single column on mobile) matching the EDUrocks layout, with 7 section cards: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV — each with a neon blue rounded-square icon badge, bold title, and short description
+- Clicking each card smooth-scrolls to the corresponding section anchor on the page
+- Update the Navigation bar to include all 7 section links in order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV — with neon blue active highlighting and updated mobile hamburger menu
+- Apply the neon blue theme consistently to HeroSection, Navigation, all section headers, cards, and Footer
+- Add a new Music section (id="music") with at least 6 music/radio stream cards (e.g., Lofi Girl, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP), each with a neon blue icon badge, name, description, and a Listen/Play button that loads the embed in an iframe overlay
+- Add a new Live TV section (id="livetv") with at least 6 live TV channel cards (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24), each with a neon blue icon badge, channel name, description, and a Watch Live button that loads the embed in an iframe overlay
+- Retain all existing sections (Games, Proxy, Movies & TV, Apps, Hacks) and their existing modals/players
 
-**User-visible outcome:** The site is fully rebranded to "zakariasadeq7site123", the Games section features popular unblocked games playable via iframe, and the Shows section includes Breaking Bad and other popular TV shows with watchable YouTube trailers.
+**User-visible outcome:** The site has a full dark maroon/neon blue EDUrocks-inspired redesign with a 2-column section card grid on the homepage, a new Music section with embedded radio/stream players, and a new Live TV section with embedded live channel players, all accessible from the updated navigation.

@@ -1,70 +1,134 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T22:58:11.566Z",
+  "generatedAt": "2026-02-26T23:54:07.981Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 5,
+    "implemented": 5,
     "items": [
       {
-        "id": "REQ-10",
-        "summary": "Update the Shows section to include Breaking Bad and at least 5 other popular TV shows (e.g., The Office, Game of Thrones, Stranger Things, Breaking Bad, The Wire, Peaky Blinders, The Sopranos). Each show card should display a title, cover image or emoji fallback, a short description, and a Watch Now button that loads an official YouTube trailer or highlight embed in the VideoPlayer modal. Update the backend hardcoded shows array to reflect these new entries.",
+        "id": "REQ-20",
+        "summary": "Redesign the entire site UI to match the EDUrocks layout shown in the uploaded screenshots: a dark maroon/near-black background (approximately #1a0a1a or #0f0a14), a 2-column responsive card grid as the primary homepage layout, each section card featuring a large rounded-square icon badge, a bold section title, and a short description beneath it. Replace all current neon green/cyan accents with neon blue (#00bfff / electric blue) for icon badge backgrounds, card hover borders, text highlights, buttons, and glow effects. Apply this redesign consistently across Navigation, HeroSection, all section cards, and Footer.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/ShowsSection.tsx"
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css",
+          "frontend/src/App.tsx",
+          "frontend/src/components/SectionCardGrid.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/GameCard.tsx",
+          "frontend/src/components/ShowCard.tsx",
+          "frontend/src/components/AppCard.tsx",
+          "frontend/src/components/HackCard.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/ShowsSection.tsx"
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css",
+          "frontend/src/App.tsx",
+          "frontend/src/components/SectionCardGrid.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/GameCard.tsx",
+          "frontend/src/components/ShowCard.tsx",
+          "frontend/src/components/AppCard.tsx",
+          "frontend/src/components/HackCard.tsx"
         ]
       },
       {
-        "id": "REQ-8",
-        "summary": "Rebrand the entire site to 'zakariasadeq7site123'. Update the site name in the Navigation logo, HeroSection headline/logo, Footer, and the HTML title tag in index.html so that 'zakariasadeq7site123' appears consistently everywhere 'NexHub' currently appears.",
+        "id": "REQ-21",
+        "summary": "Update the homepage section card grid to include all 7 sections visible across the uploaded EDUrocks screenshots — Games, Proxy, Movies & TV, Music, Apps, Hacks, and Live TV — each represented as a large 2-column card with a neon blue rounded-square icon (emoji fallback acceptable), a bold title, and a short descriptive subtitle. Clicking a card should smooth-scroll to the corresponding section on the page.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/index.html",
-          "frontend/src/components/Navigation.tsx",
-          "frontend/src/components/HeroSection.tsx",
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/SectionCardGrid.tsx",
+          "frontend/src/App.tsx"
         ],
         "matchedFiles": [
-          "frontend/index.html",
-          "frontend/src/components/Navigation.tsx",
-          "frontend/src/components/HeroSection.tsx",
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/SectionCardGrid.tsx",
+          "frontend/src/App.tsx"
         ]
       },
       {
-        "id": "REQ-9",
-        "summary": "Update the Games section to feature unblocked/proxy-style games inspired by Hypcal and Totally Science. Replace the current game list with at least 6 popular unblocked games such as Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, and Retro Bowl, using their publicly accessible embed or iframe URLs. Update the backend hardcoded games array to reflect these new entries (title, description, embed URL, thumbnail URL).",
+        "id": "REQ-22",
+        "summary": "Add a new Music section to the page (anchor id='music'). Display a grid of embedded music/radio player cards featuring at least 6 publicly accessible music or internet radio stream embeds (e.g., Lofi Girl YouTube live stream, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP). Each card shows a neon blue styled icon badge, station/stream name, a short description, and a Play/Listen button that loads the embed in an iframe overlay or inline player. Style the section header with neon blue glow text matching the new EDUrocks-inspired theme.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/GamesSection.tsx"
+          "frontend/src/components/MusicSection.tsx",
+          "frontend/src/components/MusicCard.tsx",
+          "frontend/src/components/MusicPlayer.tsx",
+          "frontend/src/App.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/GamesSection.tsx"
+          "frontend/src/components/MusicSection.tsx",
+          "frontend/src/components/MusicCard.tsx",
+          "frontend/src/components/MusicPlayer.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-23",
+        "summary": "Add a new Live TV section to the page (anchor id='livetv'). Display a grid of at least 6 publicly accessible live TV channel embeds (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24 — all of which offer free public YouTube live embeds or direct iframe embeds). Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button that loads the channel embed in an iframe overlay. Style the section header with neon blue glow text.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LiveTVSection.tsx",
+          "frontend/src/components/LiveTVCard.tsx",
+          "frontend/src/components/LiveTVPlayer.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LiveTVSection.tsx",
+          "frontend/src/components/LiveTVCard.tsx",
+          "frontend/src/components/LiveTVPlayer.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-24",
+        "summary": "Update the Navigation bar to include links to all 7 sections in this order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV. Update the HeroSection CTA buttons and/or the homepage section card grid to link to all 7 sections. Ensure the mobile hamburger menu also lists all 7 links and active section highlighting uses neon blue for the selected link.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/HeroSection.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
-    "backend/main.mo",
-    "backend/migration.mo",
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AppCard.tsx",
+    "frontend/src/components/AppsSection.tsx",
     "frontend/src/components/Footer.tsx",
+    "frontend/src/components/GameCard.tsx",
     "frontend/src/components/GamesSection.tsx",
+    "frontend/src/components/HackCard.tsx",
+    "frontend/src/components/HacksSection.tsx",
     "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/LiveTVCard.tsx",
+    "frontend/src/components/LiveTVPlayer.tsx",
+    "frontend/src/components/LiveTVSection.tsx",
+    "frontend/src/components/MusicCard.tsx",
+    "frontend/src/components/MusicPlayer.tsx",
+    "frontend/src/components/MusicSection.tsx",
     "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/SectionCardGrid.tsx",
+    "frontend/src/components/ShowCard.tsx",
     "frontend/src/components/ShowsSection.tsx",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

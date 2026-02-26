@@ -4,17 +4,29 @@ import type { Game } from '../backend';
 
 interface GameCardProps {
   game: Game;
+  genre?: string;
   onPlay: () => void;
 }
 
 const GAME_EMOJIS: Record<string, string> = {
-  'pac-man': '👾',
-  '2048': '🔢',
-  tetris: '🟦',
-  snake: '🐍',
-  minesweeper: '💣',
-  sudoku: '🔢',
+  slope: '⚡',
+  cookie: '🍪',
+  run: '🏃',
+  '1v1': '🎯',
+  retro: '🏈',
+  drift: '🚗',
+  moto: '🏍️',
+  subway: '🚇',
+  agar: '🔵',
+  krunker: '🔫',
+  happy: '😵',
+  geometry: '🔷',
+  tank: '🪖',
+  bloons: '🎈',
+  shell: '🥚',
+  wordle: '📝',
   chess: '♟️',
+  minecraft: '⛏️',
 };
 
 function getGameEmoji(title: string): string {
@@ -25,50 +37,61 @@ function getGameEmoji(title: string): string {
   return '🎮';
 }
 
-export function GameCard({ game, onPlay }: GameCardProps) {
+export function GameCard({ game, genre = 'Arcade', onPlay }: GameCardProps) {
   const hasRealThumb = game.thumbnailUrl && !game.thumbnailUrl.includes('example.com');
   const emoji = getGameEmoji(game.title);
 
   return (
-    <div className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-neon-green/40 hover:shadow-lg hover:shadow-neon-green/10 transition-all duration-300">
+    <div className="group bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-neon-blue/50 hover:shadow-xl hover:shadow-neon-blue/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
       {/* Thumbnail */}
-      <div className="relative w-full h-44 bg-gradient-to-br from-neon-green/5 to-background overflow-hidden">
+      <div
+        className="relative w-full h-44 bg-gradient-to-br from-neon-blue/5 via-background to-neon-blue/5 overflow-hidden"
+        onClick={onPlay}
+      >
         {hasRealThumb ? (
           <img
             src={game.thumbnailUrl}
             alt={game.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center gap-2">
+          <>
             <img
               src="/assets/generated/game-thumb-default.dim_400x240.png"
               alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-40"
+              className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
             />
-            <span className="relative text-5xl">{emoji}</span>
-          </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+              <span className="text-5xl drop-shadow-lg">{emoji}</span>
+            </div>
+          </>
         )}
-        {/* Overlay on hover */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-90 group-hover:scale-100">
-            <div className="w-14 h-14 rounded-full bg-neon-green/90 flex items-center justify-center shadow-lg shadow-neon-green/40">
+
+        {/* Hover play overlay */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
+            <div className="w-14 h-14 rounded-full bg-neon-blue border-2 border-neon-blue/80 flex items-center justify-center shadow-2xl shadow-neon-blue/60">
               <Play className="w-6 h-6 text-background fill-background ml-0.5" />
             </div>
           </div>
+        </div>
+
+        {/* Genre badge */}
+        <div className="absolute top-3 left-3 bg-neon-blue/20 border border-neon-blue/40 rounded-full px-2.5 py-0.5 text-xs font-bold text-neon-blue backdrop-blur-sm">
+          {genre}
         </div>
       </div>
 
       {/* Content */}
       <div className="p-4">
-        <h3 className="font-bold text-foreground text-base mb-1 truncate">{game.title}</h3>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{game.description}</p>
+        <h3 className="font-black text-foreground text-base mb-1.5 truncate font-display">{game.title}</h3>
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-2 leading-relaxed">{game.description}</p>
         <Button
           onClick={onPlay}
-          className="w-full h-9 rounded-xl bg-neon-green/15 border border-neon-green/30 text-neon-green font-semibold text-sm hover:bg-neon-green/25 hover:border-neon-green/50 hover:shadow-md hover:shadow-neon-green/20 transition-all"
+          className="w-full h-9 rounded-xl bg-neon-blue/15 border-2 border-neon-blue/40 text-neon-blue font-bold text-sm hover:bg-neon-blue/25 hover:border-neon-blue/70 hover:shadow-lg hover:shadow-neon-blue/25 transition-all"
           variant="ghost"
         >
-          <Play className="w-3.5 h-3.5 mr-1.5 fill-neon-green" />
+          <Play className="w-3.5 h-3.5 mr-1.5 fill-neon-blue" />
           Play Now
         </Button>
       </div>

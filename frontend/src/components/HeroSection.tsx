@@ -1,9 +1,13 @@
-import { Globe, Gamepad2, Tv, ChevronDown } from 'lucide-react';
+import { Globe, Gamepad2, Tv, ChevronDown, Smartphone, Lock, Music, Radio } from 'lucide-react';
 
 const ctaButtons = [
-  { label: 'Web Proxy', href: '#proxy', icon: Globe, color: 'cyan' },
-  { label: 'Games', href: '#games', icon: Gamepad2, color: 'green' },
-  { label: 'Shows', href: '#shows', icon: Tv, color: 'purple' },
+  { label: 'Games', href: '#games', icon: Gamepad2 },
+  { label: 'Movies & TV', href: '#shows', icon: Tv },
+  { label: 'Proxy', href: '#proxy', icon: Globe },
+  { label: 'Music', href: '#music', icon: Music },
+  { label: 'Apps', href: '#apps', icon: Smartphone },
+  { label: 'Hacks', href: '#hacks', icon: Lock },
+  { label: 'Live TV', href: '#livetv', icon: Radio },
 ];
 
 export function HeroSection() {
@@ -17,15 +21,15 @@ export function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-hero-gradient" />
-      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-25" />
 
       {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-green/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-neon-purple/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-blue/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-blue/6 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-neon-purple/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Hero banner image */}
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-10">
         <img
           src="/assets/generated/hero-banner.dim_1200x400.png"
           alt=""
@@ -37,7 +41,7 @@ export function HeroSection() {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <div className="w-20 h-20 rounded-2xl bg-neon-cyan/15 border border-neon-cyan/30 flex items-center justify-center shadow-lg shadow-neon-cyan/20">
+          <div className="w-20 h-20 rounded-2xl bg-neon-blue/15 border-2 border-neon-blue/40 flex items-center justify-center shadow-lg shadow-neon-blue/25">
             <img
               src="/assets/generated/nexhub-logo.dim_128x128.png"
               alt="zakariasadeq7site123 Logo"
@@ -46,33 +50,36 @@ export function HeroSection() {
           </div>
         </div>
 
+        {/* Badge */}
+        <div className="flex justify-center mb-5">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neon-blue/10 border border-neon-blue/30 text-neon-blue text-xs font-bold uppercase tracking-widest">
+            <span className="w-1.5 h-1.5 rounded-full bg-neon-blue animate-pulse" />
+            Games · Shows · Proxy · Music · Apps · Hacks · Live TV
+          </span>
+        </div>
+
         {/* Headline */}
-        <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-4">
+        <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-4 font-display leading-none">
           <span className="text-foreground">zakariasadeq7</span>
-          <span className="text-neon-cyan drop-shadow-[0_0_20px_oklch(0.85_0.2_195)]">site123</span>
+          <br />
+          <span className="text-neon-blue neon-text-blue">site123</span>
         </h1>
 
         {/* Tagline */}
-        <p className="text-lg sm:text-xl text-muted-foreground mb-3 font-medium">
-          Browse freely. Play games. Watch shows.
+        <p className="text-lg sm:text-xl text-muted-foreground mb-3 font-semibold">
+          Browse freely. Play games. Watch shows. Stream music.
         </p>
         <p className="text-sm text-muted-foreground/60 mb-10 max-w-md mx-auto">
-          Your all-in-one entertainment portal — access the web, play unblocked browser games, and stream your favorite TV shows.
+          Your all-in-one entertainment portal — play unblocked games, stream shows, access social apps, listen to music, and watch live TV.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          {ctaButtons.map(({ label, href, icon: Icon, color }) => (
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {ctaButtons.map(({ label, href, icon: Icon }) => (
             <button
               key={href}
               onClick={() => handleScroll(href)}
-              className={`group flex items-center gap-3 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 border ${
-                color === 'cyan'
-                  ? 'bg-neon-cyan/15 border-neon-cyan/40 text-neon-cyan hover:bg-neon-cyan/25 hover:border-neon-cyan/60 hover:shadow-lg hover:shadow-neon-cyan/20'
-                  : color === 'green'
-                  ? 'bg-neon-green/10 border-neon-green/30 text-neon-green hover:bg-neon-green/20 hover:border-neon-green/50 hover:shadow-lg hover:shadow-neon-green/20'
-                  : 'bg-neon-purple/10 border-neon-purple/30 text-neon-purple hover:bg-neon-purple/20 hover:border-neon-purple/50 hover:shadow-lg hover:shadow-neon-purple/20'
-              }`}
+              className="group flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 border-2 bg-neon-blue/15 border-neon-blue/50 text-neon-blue hover:bg-neon-blue/25 hover:border-neon-blue hover:shadow-xl hover:shadow-neon-blue/30 hover:-translate-y-0.5"
             >
               <Icon className="w-4 h-4" />
               {label}
@@ -83,8 +90,8 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <button
-        onClick={() => handleScroll('#proxy')}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/50 hover:text-neon-cyan transition-colors animate-bounce"
+        onClick={() => handleScroll('#games')}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/50 hover:text-neon-blue transition-colors animate-bounce"
         aria-label="Scroll down"
       >
         <ChevronDown className="w-6 h-6" />

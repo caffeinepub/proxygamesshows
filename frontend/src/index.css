@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,74 +6,63 @@
 
 @layer base {
   :root {
+    /* Dark maroon/near-black background matching EDUrocks */
+    --background: 0.12 0.018 330;
+    --foreground: 0.95 0.01 0;
+
+    --card: 0.16 0.022 330;
+    --card-foreground: 0.95 0.01 0;
+
+    --popover: 0.16 0.022 330;
+    --popover-foreground: 0.95 0.01 0;
+
+    --primary: 0.82 0.20 220;
+    --primary-foreground: 0.08 0.01 0;
+
+    --secondary: 0.20 0.025 330;
+    --secondary-foreground: 0.85 0.01 0;
+
+    --muted: 0.20 0.018 330;
+    --muted-foreground: 0.55 0.01 0;
+
+    --accent: 0.20 0.025 330;
+    --accent-foreground: 0.85 0.01 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.95 0.01 0;
+
+    --border: 0.24 0.022 330;
+    --input: 0.24 0.022 330;
+    --ring: 0.82 0.20 220;
+
     --radius: 0.75rem;
 
-    /* Light mode (not primary use case, but defined) */
-    --background: 0.12 0.005 260;
-    --foreground: 0.95 0.01 260;
-    --card: 0.16 0.008 260;
-    --card-foreground: 0.95 0.01 260;
-    --popover: 0.18 0.008 260;
-    --popover-foreground: 0.95 0.01 260;
-    --primary: 0.85 0.18 195;
-    --primary-foreground: 0.08 0.005 260;
-    --secondary: 0.22 0.01 260;
-    --secondary-foreground: 0.85 0.01 260;
-    --muted: 0.20 0.008 260;
-    --muted-foreground: 0.55 0.02 260;
-    --accent: 0.22 0.01 260;
-    --accent-foreground: 0.95 0.01 260;
-    --destructive: 0.62 0.22 25;
-    --destructive-foreground: 0.98 0 0;
-    --border: 0.28 0.01 260;
-    --input: 0.22 0.01 260;
-    --ring: 0.85 0.18 195;
-
-    /* Neon accent tokens */
-    --neon-cyan: 0.85 0.18 195;
-    --neon-green: 0.82 0.18 145;
-    --neon-purple: 0.72 0.18 290;
-
     /* Nav background */
-    --nav-bg: 0.10 0.005 260;
+    --nav-bg: 0.12 0.018 330;
 
-    /* Chart colors */
-    --chart-1: 0.85 0.18 195;
-    --chart-2: 0.82 0.18 145;
-    --chart-3: 0.72 0.18 290;
-    --chart-4: 0.80 0.18 55;
-    --chart-5: 0.75 0.18 25;
-
-    /* Sidebar */
-    --sidebar: 0.14 0.006 260;
-    --sidebar-foreground: 0.95 0.01 260;
-    --sidebar-primary: 0.85 0.18 195;
-    --sidebar-primary-foreground: 0.08 0.005 260;
-    --sidebar-accent: 0.20 0.008 260;
-    --sidebar-accent-foreground: 0.95 0.01 260;
-    --sidebar-border: 0.28 0.01 260;
-    --sidebar-ring: 0.85 0.18 195;
+    /* Neon accent tokens — neon blue is primary */
+    --neon-blue:   0.82 0.20 220;
+    --neon-cyan:   0.85 0.18 195;
+    --neon-purple: 0.72 0.22 290;
+    --neon-pink:   0.72 0.28 340;
+    --neon-orange: 0.75 0.22 55;
+    --neon-yellow: 0.88 0.20 95;
+    /* Keep green alias pointing to blue for backward compat */
+    --neon-green:  0.82 0.20 220;
   }
 
-  /* Force dark mode always for this app */
+  /* Force dark mode always */
   html {
     color-scheme: dark;
   }
 
   * {
     @apply border-border;
-    box-sizing: border-box;
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   html {
@@ -82,16 +71,55 @@
 }
 
 @layer utilities {
-  .bg-hero-gradient {
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.18 0.04 195 / 0.6), transparent 70%),
-                radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.18 0.04 145 / 0.3), transparent 60%),
-                oklch(0.12 0.005 260);
+  /* Neon text glow utilities */
+  .neon-text-blue {
+    text-shadow:
+      0 0 10px oklch(0.82 0.20 220 / 0.8),
+      0 0 20px oklch(0.82 0.20 220 / 0.5),
+      0 0 40px oklch(0.82 0.20 220 / 0.25);
   }
 
+  /* Keep green alias for backward compat */
+  .neon-text-green {
+    text-shadow:
+      0 0 10px oklch(0.82 0.20 220 / 0.8),
+      0 0 20px oklch(0.82 0.20 220 / 0.5),
+      0 0 40px oklch(0.82 0.20 220 / 0.25);
+  }
+
+  .neon-text-cyan {
+    text-shadow:
+      0 0 10px oklch(0.85 0.18 195 / 0.7),
+      0 0 20px oklch(0.85 0.18 195 / 0.4),
+      0 0 40px oklch(0.85 0.18 195 / 0.2);
+  }
+
+  .neon-text-purple {
+    text-shadow:
+      0 0 10px oklch(0.72 0.22 290 / 0.7),
+      0 0 20px oklch(0.72 0.22 290 / 0.4),
+      0 0 40px oklch(0.72 0.22 290 / 0.2);
+  }
+
+  .neon-text-pink {
+    text-shadow:
+      0 0 10px oklch(0.72 0.28 340 / 0.7),
+      0 0 20px oklch(0.72 0.28 340 / 0.4),
+      0 0 40px oklch(0.72 0.28 340 / 0.2);
+  }
+
+  .neon-text-orange {
+    text-shadow:
+      0 0 10px oklch(0.75 0.22 55 / 0.7),
+      0 0 20px oklch(0.75 0.22 55 / 0.4),
+      0 0 40px oklch(0.75 0.22 55 / 0.2);
+  }
+
+  /* Background grid pattern */
   .bg-grid-pattern {
     background-image:
-      linear-gradient(oklch(0.85 0.18 195 / 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(0.85 0.18 195 / 0.06) 1px, transparent 1px);
+      linear-gradient(oklch(0.82 0.20 220 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.82 0.20 220 / 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
