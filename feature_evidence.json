@@ -1,0 +1,129 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-design-a-bold-dark-themed-visual-identity-for-the-site-with-a-neon-accent-color-scheme-e-g-electric-green-or-cyan-on-near-black-backgrounds-modern-sans-serif-typography-and-a-consistent-card-based-layout-across-all-sections-apply-the-theme-globally",
+      "featureTitle": "Design a bold, dark-themed visual identity for the site with a neon accent color scheme (e.g., electric green or cyan on near-black backgrounds), modern sans-serif typography, and a consistent card-based layout across all sections. Apply the theme globally.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-top-navigation-bar-with-the-site-logo-name-and-links-to-three-main-sections-proxy-games-and-shows-the-active-section-should-be-visually-highlighted",
+      "featureTitle": "Create a top navigation bar with the site logo/name and links to three main sections: Proxy, Games, and Shows. The active section should be visually highlighted.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-proxy-section-that-embeds-an-iframe-based-web-proxy-allowing-users-to-type-a-url-and-load-it-inside-the-page-include-a-url-input-field-a-go-button-and-a-full-width-iframe-display-area-below-the-input",
+      "featureTitle": "Build a Proxy section that embeds an iframe-based web proxy allowing users to type a URL and load it inside the page. Include a URL input field, a 'Go' button, and a full-width iframe display area below the input.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProxySection.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-games-section-displaying-a-grid-of-playable-browser-games-as-cards-each-card-shows-a-game-title-a-thumbnail-image-and-a-play-button-clicking-play-loads-the-game-in-an-iframe-overlay-or-dedicated-view-within-the-page-include-at-least-6-game-entries-e-g-snake-tetris-2048-pac-man-flappy-bird-minesweeper-as-embedded-html5-or-iframe-games-from-publicly-accessible-sources",
+      "featureTitle": "Build a Games section displaying a grid of playable browser games as cards. Each card shows a game title, a thumbnail image, and a Play button. Clicking Play loads the game in an iframe overlay or dedicated view within the page. Include at least 6 game entries (e.g., Snake, Tetris, 2048, Pac-Man, Flappy Bird, Minesweeper) as embedded HTML5 or iframe games from publicly accessible sources.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/GameCard.tsx",
+        "frontend/src/components/GamePlayer.tsx",
+        "frontend/src/components/GamesSection.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-shows-section-displaying-a-grid-of-show-video-content-cards-each-card-shows-a-show-title-a-cover-image-and-a-watch-button-clicking-watch-loads-the-video-content-in-an-embedded-iframe-e-g-from-a-public-youtube-playlist-or-embed-url-include-at-least-6-show-entries",
+      "featureTitle": "Build a Shows section displaying a grid of show/video content cards. Each card shows a show title, a cover image, and a Watch button. Clicking Watch loads the video content in an embedded iframe (e.g., from a public YouTube playlist or embed URL). Include at least 6 show entries.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ShowCard.tsx",
+        "frontend/src/components/ShowsSection.tsx",
+        "frontend/src/components/VideoPlayer.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-hero-landing-section-at-the-top-of-the-homepage-with-a-headline-a-short-tagline-describing-the-site-e-g-browse-freely-play-games-watch-shows-and-quick-access-buttons-linking-to-each-section",
+      "featureTitle": "Create a hero/landing section at the top of the homepage with a headline, a short tagline describing the site (e.g., 'Browse freely. Play games. Watch shows.'), and quick-access buttons linking to each section.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

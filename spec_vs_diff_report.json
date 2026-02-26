@@ -1,0 +1,75 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T22:40:20.190Z",
+  "summary": "The diff implements most requirements well. REQ-1 through REQ-6 are fully addressed in the frontend with a dark neon theme, navigation, proxy section, games grid, shows grid, and hero section. REQ-7 is partially implemented: the backend has query functions and records, but the records are missing the required 'id' field, and there are only 2 games and 2 shows stored. Additionally, the backend uses 'example.com' placeholder embed/thumbnail URLs rather than publicly accessible sources.",
+  "missing_requirements": [
+    {
+      "id": "REQ-7",
+      "requirement": "Each record includes at minimum: id, title, description, embedUrl, thumbnailUrl",
+      "reason": "The Game and Show types in backend/main.mo do not include an 'id' field. Only title, description, embedUrl, and thumbnailUrl are defined.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Store a static list of games and shows in the backend as stable data records with publicly accessible embed URLs",
+      "reason": "The backend only stores 2 games and 2 shows, and all embed/thumbnail URLs are 'example.com' placeholders rather than publicly accessible sources. The frontend compensates with fallback data, but the backend itself does not fulfill the requirement.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity / authentication infrastructure (InternetIdentityProvider, useInternetIdentity hook, AuthClient integration)",
+      "reason": "The build request explicitly states 'Do not implement user authentication or login walls' and lists user accounts as a non-goal, yet a full Internet Identity auth system is wired into the app.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Refresh and Clear buttons in the Proxy section beyond the specified Go button",
+      "reason": "REQ-3 only specifies a URL input field and a Go button. Refresh and Clear controls were added beyond the specification.",
+      "evidence": [
+        "frontend/src/components/ProxySection.tsx"
+      ]
+    },
+    {
+      "description": "Footer component with caffeine.ai attribution and UTM tracking",
+      "reason": "No footer was requested in the build specification.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/GameCard.tsx",
+    "frontend/src/components/GamePlayer.tsx",
+    "frontend/src/components/GamesSection.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/ProxySection.tsx",
+    "frontend/src/components/ShowCard.tsx",
+    "frontend/src/components/ShowsSection.tsx",
+    "frontend/src/components/VideoPlayer.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

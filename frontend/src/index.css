@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Light mode (not primary use case, but defined) */
+    --background: 0.12 0.005 260;
+    --foreground: 0.95 0.01 260;
+    --card: 0.16 0.008 260;
+    --card-foreground: 0.95 0.01 260;
+    --popover: 0.18 0.008 260;
+    --popover-foreground: 0.95 0.01 260;
+    --primary: 0.85 0.18 195;
+    --primary-foreground: 0.08 0.005 260;
+    --secondary: 0.22 0.01 260;
+    --secondary-foreground: 0.85 0.01 260;
+    --muted: 0.20 0.008 260;
+    --muted-foreground: 0.55 0.02 260;
+    --accent: 0.22 0.01 260;
+    --accent-foreground: 0.95 0.01 260;
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.28 0.01 260;
+    --input: 0.22 0.01 260;
+    --ring: 0.85 0.18 195;
+
+    /* Neon accent tokens */
+    --neon-cyan: 0.85 0.18 195;
+    --neon-green: 0.82 0.18 145;
+    --neon-purple: 0.72 0.18 290;
+
+    /* Nav background */
+    --nav-bg: 0.10 0.005 260;
+
+    /* Chart colors */
+    --chart-1: 0.85 0.18 195;
+    --chart-2: 0.82 0.18 145;
+    --chart-3: 0.72 0.18 290;
+    --chart-4: 0.80 0.18 55;
+    --chart-5: 0.75 0.18 25;
+
+    /* Sidebar */
+    --sidebar: 0.14 0.006 260;
+    --sidebar-foreground: 0.95 0.01 260;
+    --sidebar-primary: 0.85 0.18 195;
+    --sidebar-primary-foreground: 0.08 0.005 260;
+    --sidebar-accent: 0.20 0.008 260;
+    --sidebar-accent-foreground: 0.95 0.01 260;
+    --sidebar-border: 0.28 0.01 260;
+    --sidebar-ring: 0.85 0.18 195;
+  }
+
+  /* Force dark mode always for this app */
+  html {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.18 0.04 195 / 0.6), transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, oklch(0.18 0.04 145 / 0.3), transparent 60%),
+                oklch(0.12 0.005 260);
+  }
+
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(oklch(0.85 0.18 195 / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.85 0.18 195 / 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}

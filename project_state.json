@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "A website featuring a web proxy, online games, and shows/streaming content.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Dark neon-themed hero banner with abstract glowing grid lines and a subtle cityscape silhouette (hero-banner.dim_1200x400.png)\n- Neon-style logo mark icon with an abstract 'N' or hub symbol in cyan on dark background (nexhub-logo.dim_128x128.png)\n- Placeholder game card thumbnail with a retro pixel-art controller icon on dark background (game-thumb-default.dim_400x240.png)\n- Placeholder show card thumbnail with a retro film reel icon on dark background (show-thumb-default.dim_400x240.png)",
+  "existing_features": [
+    {
+      "id": "feature-design-a-bold-dark-themed-visual-identity-for-the-site-with-a-neon-accent-color-scheme-e-g-electric-green-or-cyan-on-near-black-backgrounds-modern-sans-serif-typography-and-a-consistent-card-based-layout-across-all-sections-apply-the-theme-globally",
+      "title": "Design a bold, dark-themed visual identity for the site with a neon accent color scheme (e.g., electric green or cyan on near-black backgrounds), modern sans-serif typography, and a consistent card-based layout across all sections. Apply the theme globally.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-top-navigation-bar-with-the-site-logo-name-and-links-to-three-main-sections-proxy-games-and-shows-the-active-section-should-be-visually-highlighted",
+      "title": "Create a top navigation bar with the site logo/name and links to three main sections: Proxy, Games, and Shows. The active section should be visually highlighted.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-proxy-section-that-embeds-an-iframe-based-web-proxy-allowing-users-to-type-a-url-and-load-it-inside-the-page-include-a-url-input-field-a-go-button-and-a-full-width-iframe-display-area-below-the-input",
+      "title": "Build a Proxy section that embeds an iframe-based web proxy allowing users to type a URL and load it inside the page. Include a URL input field, a 'Go' button, and a full-width iframe display area below the input.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-games-section-displaying-a-grid-of-playable-browser-games-as-cards-each-card-shows-a-game-title-a-thumbnail-image-and-a-play-button-clicking-play-loads-the-game-in-an-iframe-overlay-or-dedicated-view-within-the-page-include-at-least-6-game-entries-e-g-snake-tetris-2048-pac-man-flappy-bird-minesweeper-as-embedded-html5-or-iframe-games-from-publicly-accessible-sources",
+      "title": "Build a Games section displaying a grid of playable browser games as cards. Each card shows a game title, a thumbnail image, and a Play button. Clicking Play loads the game in an iframe overlay or dedicated view within the page. Include at least 6 game entries (e.g., Snake, Tetris, 2048, Pac-Man, Flappy Bird, Minesweeper) as embedded HTML5 or iframe games from publicly accessible sources.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-shows-section-displaying-a-grid-of-show-video-content-cards-each-card-shows-a-show-title-a-cover-image-and-a-watch-button-clicking-watch-loads-the-video-content-in-an-embedded-iframe-e-g-from-a-public-youtube-playlist-or-embed-url-include-at-least-6-show-entries",
+      "title": "Build a Shows section displaying a grid of show/video content cards. Each card shows a show title, a cover image, and a Watch button. Clicking Watch loads the video content in an embedded iframe (e.g., from a public YouTube playlist or embed URL). Include at least 6 show entries.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-hero-landing-section-at-the-top-of-the-homepage-with-a-headline-a-short-tagline-describing-the-site-e-g-browse-freely-play-games-watch-shows-and-quick-access-buttons-linking-to-each-section",
+      "title": "Create a hero/landing section at the top of the homepage with a headline, a short tagline describing the site (e.g., 'Browse freely. Play games. Watch shows.'), and quick-access buttons linking to each section.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Web proxy feature for browsing anonymously or accessing blocked sites",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Games section with playable online games",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Shows/streaming section for watching TV shows or video content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Store a static list of games and shows in the backend as stable data records (title, description, embed URL, thumbnail URL). Expose query functions to retrieve all games and all shows.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "ProxyGamesShows",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

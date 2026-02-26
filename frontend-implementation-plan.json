@@ -1,0 +1,156 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Entertainment Hub with Proxy, Games, and Shows",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Apply dark-themed visual identity with neon accents globally",
+      "acceptanceCriteria": [
+        "All pages share the same dark background and neon accent colors",
+        "Typography is consistent across headings, labels, and body text",
+        "No unstyled or default-browser-styled elements are visible"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS variables for dark theme with neon accent colors (electric cyan), set body background to near-black, apply consistent modern sans-serif typography, and establish base styles for all elements"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom dark background colors, neon accent colors (cyan primary, electric green secondary), and configure typography plugin for consistent font scale across the application"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create top navigation bar with logo and section links",
+      "acceptanceCriteria": [
+        "Navigation bar is visible on all pages",
+        "Clicking each nav link scrolls to or navigates to the correct section",
+        "Active section link has a distinct visual indicator"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create Navigation component with site logo/name 'NexHub', three navigation links (Proxy, Games, Shows) with smooth scroll behavior, active link highlighting using intersection observer or scroll position tracking, and dark theme styling with neon accents"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Navigation component at the top of the app layout, above all section content"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build iframe-based web proxy section",
+      "acceptanceCriteria": [
+        "Users can type a URL and click Go to load a site in the iframe",
+        "The iframe is displayed below the input in a clearly bounded container",
+        "Input field has placeholder text like 'Enter a URL...'",
+        "HTTPS URLs are accepted and passed to the iframe src"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProxySection.tsx",
+          "operation": "create",
+          "description": "Create ProxySection component with a URL input field (placeholder 'Enter a URL...'), Go button, and full-width iframe container. Implement state management for URL input and iframe src, validate HTTPS URLs, and style with dark theme card layout"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render ProxySection component with an id='proxy' attribute for navigation anchor targeting"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build Games section with playable browser games grid",
+      "acceptanceCriteria": [
+        "At least 6 game cards are displayed in a responsive grid",
+        "Each card has a title, thumbnail, and Play button",
+        "Clicking Play loads the game in an iframe or inline view",
+        "Games are accessible without login"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GamesSection.tsx",
+          "operation": "create",
+          "description": "Create GamesSection component that fetches games from backend.getAllGames(), displays them in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile) with GameCard sub-components, and manages game player modal/overlay state. Use the generated placeholder thumbnail at frontend/public/assets/generated/game-thumb-default.dim_400x240.png as fallback for any missing game thumbnails"
+        },
+        {
+          "path": "frontend/src/components/GameCard.tsx",
+          "operation": "create",
+          "description": "Create GameCard component displaying game title, thumbnail image, and Play button with dark theme card styling and neon accent hover effects. Handle click to trigger parent callback for loading game"
+        },
+        {
+          "path": "frontend/src/components/GamePlayer.tsx",
+          "operation": "create",
+          "description": "Create GamePlayer component as a modal/overlay with iframe for embedding game content, close button, and full-screen dark backdrop. Accept embedUrl prop and load game in iframe"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render GamesSection component with an id='games' attribute for navigation anchor targeting"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Shows section with video content grid",
+      "acceptanceCriteria": [
+        "At least 6 show cards are displayed in a responsive grid",
+        "Each card has a title, cover image, and Watch button",
+        "Clicking Watch opens the video in an embedded iframe or modal",
+        "Show cards are visually distinct from game cards"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ShowsSection.tsx",
+          "operation": "create",
+          "description": "Create ShowsSection component that fetches shows from backend.getAllShows(), displays them in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile) with ShowCard sub-components, and manages video player modal state. Use the generated placeholder thumbnail at frontend/public/assets/generated/show-thumb-default.dim_400x240.png as fallback for any missing show thumbnails"
+        },
+        {
+          "path": "frontend/src/components/ShowCard.tsx",
+          "operation": "create",
+          "description": "Create ShowCard component displaying show title, cover image, and Watch button with dark theme card styling distinct from GameCard (e.g., different accent color or border style) and neon accent hover effects. Handle click to trigger parent callback for loading video"
+        },
+        {
+          "path": "frontend/src/components/VideoPlayer.tsx",
+          "operation": "create",
+          "description": "Create VideoPlayer component as a modal/overlay with iframe for embedding video content (YouTube or other embeds), close button, and full-screen dark backdrop. Accept embedUrl prop and load video in iframe with appropriate allow attributes for autoplay"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render ShowsSection component with an id='shows' attribute for navigation anchor targeting"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create hero/landing section with headline and quick-access buttons",
+      "acceptanceCriteria": [
+        "Hero section is the first visible element on page load",
+        "Headline and tagline are displayed prominently",
+        "Three CTA buttons link to Proxy, Games, and Shows sections respectively"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create HeroSection component with headline 'NexHub', tagline 'Browse freely. Play games. Watch shows.', and three CTA buttons linking to #proxy, #games, and #shows sections with smooth scroll. Use the generated hero banner image at frontend/public/assets/generated/hero-banner.dim_1200x400.png as background, and include the generated logo at frontend/public/assets/generated/nexhub-logo.dim_128x128.png. Style with dark theme, neon text accents, and prominent typography"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render HeroSection component as the first element after Navigation, ensuring it appears at the top of the page on initial load"
+        }
+      ]
+    }
+  ]
+}
