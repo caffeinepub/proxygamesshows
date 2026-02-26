@@ -40,16 +40,16 @@ export function HeroSection() {
           <div className="w-20 h-20 rounded-2xl bg-neon-cyan/15 border border-neon-cyan/30 flex items-center justify-center shadow-lg shadow-neon-cyan/20">
             <img
               src="/assets/generated/nexhub-logo.dim_128x128.png"
-              alt="NexHub Logo"
+              alt="zakariasadeq7site123 Logo"
               className="w-12 h-12 object-contain"
             />
           </div>
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-4">
-          <span className="text-foreground">Nex</span>
-          <span className="text-neon-cyan drop-shadow-[0_0_20px_oklch(0.85_0.2_195)]">Hub</span>
+        <h1 className="text-4xl sm:text-6xl font-black tracking-tight mb-4">
+          <span className="text-foreground">zakariasadeq7</span>
+          <span className="text-neon-cyan drop-shadow-[0_0_20px_oklch(0.85_0.2_195)]">site123</span>
         </h1>
 
         {/* Tagline */}
@@ -57,7 +57,7 @@ export function HeroSection() {
           Browse freely. Play games. Watch shows.
         </p>
         <p className="text-sm text-muted-foreground/60 mb-10 max-w-md mx-auto">
-          Your all-in-one entertainment portal — access the web, play browser games, and stream your favorite shows.
+          Your all-in-one entertainment portal — access the web, play unblocked browser games, and stream your favorite TV shows.
         </p>
 
         {/* CTA Buttons */}

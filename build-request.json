@@ -1,146 +1,84 @@
 {
   "kind": "build_request",
-  "title": "Entertainment Hub with Proxy, Games, and Shows",
-  "projectName": "NexHub",
+  "title": "Rebrand to zakariasadeq7site123, update games to unblocked style, and update shows with Breaking Bad + popular TV",
+  "projectName": "zakariasadeq7site123",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Design a bold, dark-themed visual identity for the site with a neon accent color scheme (e.g., electric green or cyan on near-black backgrounds), modern sans-serif typography, and a consistent card-based layout across all sections. Apply the theme globally.",
+      "id": "REQ-8",
+      "text": "Rebrand the entire site to 'zakariasadeq7site123'. Update the site name in the Navigation logo, HeroSection headline/logo, Footer, and the HTML title tag in index.html so that 'zakariasadeq7site123' appears consistently everywhere 'NexHub' currently appears.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All pages share the same dark background and neon accent colors",
-        "Typography is consistent across headings, labels, and body text",
-        "No unstyled or default-browser-styled elements are visible"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Create a top navigation bar with the site logo/name and links to three main sections: Proxy, Games, and Shows. The active section should be visually highlighted.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Navigation bar is visible on all pages",
-        "Clicking each nav link scrolls to or navigates to the correct section",
-        "Active section link has a distinct visual indicator"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Build a Proxy section that embeds an iframe-based web proxy allowing users to type a URL and load it inside the page. Include a URL input field, a 'Go' button, and a full-width iframe display area below the input.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
+          "msg-latest"
         ],
         "quotes": [
-          "proxie"
+          "Name it zakariasadeq7site123",
+          "add the name to be zakariasadeq7site123"
         ]
       },
       "acceptanceCriteria": [
-        "Users can type a URL and click Go to load a site in the iframe",
-        "The iframe is displayed below the input in a clearly bounded container",
-        "Input field has placeholder text like 'Enter a URL...'",
-        "HTTPS URLs are accepted and passed to the iframe src"
+        "The browser tab title reads 'zakariasadeq7site123'",
+        "The Navigation bar logo/name displays 'zakariasadeq7site123'",
+        "The HeroSection displays 'zakariasadeq7site123' as the site name",
+        "The Footer displays 'zakariasadeq7site123' as the site logo/name",
+        "No instance of the old name 'NexHub' remains visible in the UI"
       ]
     },
     {
-      "id": "REQ-4",
-      "text": "Build a Games section displaying a grid of playable browser games as cards. Each card shows a game title, a thumbnail image, and a Play button. Clicking Play loads the game in an iframe overlay or dedicated view within the page. Include at least 6 game entries (e.g., Snake, Tetris, 2048, Pac-Man, Flappy Bird, Minesweeper) as embedded HTML5 or iframe games from publicly accessible sources.",
-      "target": "frontend",
+      "id": "REQ-9",
+      "text": "Update the Games section to feature unblocked/proxy-style games inspired by Hypcal and Totally Science. Replace the current game list with at least 6 popular unblocked games such as Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, and Retro Bowl, using their publicly accessible embed or iframe URLs. Update the backend hardcoded games array to reflect these new entries (title, description, embed URL, thumbnail URL).",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-latest"
         ],
         "quotes": [
-          "games"
+          "yes u did good just do those 3 steps"
         ]
       },
       "acceptanceCriteria": [
-        "At least 6 game cards are displayed in a responsive grid",
-        "Each card has a title, thumbnail, and Play button",
-        "Clicking Play loads the game in an iframe or inline view",
-        "Games are accessible without login"
+        "At least 6 unblocked/proxy-style games are displayed in the Games section grid",
+        "Each game card shows a title, thumbnail (or emoji fallback), and a Play Now button",
+        "Clicking Play Now opens the game in the GamePlayer modal iframe",
+        "Games are inspired by the Hypcal/Totally Science catalog (Slope, Run 3, Cookie Clicker, etc.)",
+        "Backend games array is updated with the new game entries"
       ]
     },
     {
-      "id": "REQ-5",
-      "text": "Build a Shows section displaying a grid of show/video content cards. Each card shows a show title, a cover image, and a Watch button. Clicking Watch loads the video content in an embedded iframe (e.g., from a public YouTube playlist or embed URL). Include at least 6 show entries.",
-      "target": "frontend",
+      "id": "REQ-10",
+      "text": "Update the Shows section to include Breaking Bad and at least 5 other popular TV shows (e.g., The Office, Game of Thrones, Stranger Things, Breaking Bad, The Wire, Peaky Blinders, The Sopranos). Each show card should display a title, cover image or emoji fallback, a short description, and a Watch Now button that loads an official YouTube trailer or highlight embed in the VideoPlayer modal. Update the backend hardcoded shows array to reflect these new entries.",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-latest"
         ],
         "quotes": [
-          "shows"
+          "add breaking bad and many other popular TV shows please"
         ]
       },
       "acceptanceCriteria": [
-        "At least 6 show cards are displayed in a responsive grid",
-        "Each card has a title, cover image, and Watch button",
-        "Clicking Watch opens the video in an embedded iframe or modal",
-        "Show cards are visually distinct from game cards"
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Create a hero/landing section at the top of the homepage with a headline, a short tagline describing the site (e.g., 'Browse freely. Play games. Watch shows.'), and quick-access buttons linking to each section.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Hero section is the first visible element on page load",
-        "Headline and tagline are displayed prominently",
-        "Three CTA buttons link to Proxy, Games, and Shows sections respectively"
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Store a static list of games and shows in the backend as stable data records (title, description, embed URL, thumbnail URL). Expose query functions to retrieve all games and all shows.",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Backend has a query function that returns the list of games",
-        "Backend has a query function that returns the list of shows",
-        "Each record includes at minimum: id, title, description, embedUrl, thumbnailUrl"
+        "Breaking Bad appears as a show entry in the Shows section",
+        "At least 6 popular TV shows are displayed in the Shows section grid",
+        "Each show card shows a title, cover image or emoji fallback, description, and Watch Now button",
+        "Clicking Watch Now opens a YouTube embed for that show's trailer in the VideoPlayer modal",
+        "Backend shows array is updated with the new show entries including YouTube embed URLs"
       ]
     }
   ],
   "constraints": [
-    "Do not implement user authentication or login walls for accessing content",
-    "All embedded iframes must use publicly accessible URLs; no paid or gated content sources",
-    "Keep all Motoko logic in a single actor file (backend/main.mo)"
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui",
+    "Preserve the existing dark neon theme, card-based layout, and overall visual design",
+    "Game and show embed URLs must be publicly accessible and suitable for iframe embedding"
   ],
   "nonGoals": [
-    "User accounts or saved history",
-    "Video hosting or uploading",
-    "Real-time chat or comments",
-    "Payment or subscription features",
-    "Mobile app version"
+    "Changing the visual theme or color scheme",
+    "Adding new sections beyond Proxy, Games, and Shows",
+    "Implementing user authentication or accounts",
+    "Adding a backend search or dynamic content system"
   ],
   "imageRequirements": {
-    "required": [
-      "Dark neon-themed hero banner with abstract glowing grid lines and a subtle cityscape silhouette (hero-banner.dim_1200x400.png)",
-      "Neon-style logo mark icon with an abstract 'N' or hub symbol in cyan on dark background (nexhub-logo.dim_128x128.png)",
-      "Placeholder game card thumbnail with a retro pixel-art controller icon on dark background (game-thumb-default.dim_400x240.png)",
-      "Placeholder show card thumbnail with a retro film reel icon on dark background (show-thumb-default.dim_400x240.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

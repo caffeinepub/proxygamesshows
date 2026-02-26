@@ -1,17 +1,17 @@
 {
   "frontend/src/App.tsx": "Root app component that composes Navigation, HeroSection, ProxySection, GamesSection, ShowsSection, and Footer into a single-page layout with anchor-based section navigation.",
   "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching all games and all shows from the backend canister actor.",
-  "frontend/src/components/Navigation.tsx": "Fixed top navigation bar with NexHub logo, section links (Proxy, Games, Shows) with active state tracking via scroll position, and a responsive mobile menu.",
-  "frontend/src/components/HeroSection.tsx": "Full-screen hero landing section with NexHub headline, tagline, hero banner background, glow orbs, and three CTA buttons linking to each main section.",
+  "frontend/src/components/Navigation.tsx": "Fixed top navigation bar with \"zakariasadeq7site123\" logo branding, section links (Proxy, Games, Shows) with active state tracking via scroll position, and a responsive mobile menu.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero landing section with \"zakariasadeq7site123\" headline, tagline, hero banner background, glow orbs, and three CTA buttons linking to each main section.",
   "frontend/src/components/ProxySection.tsx": "Web proxy section with a URL input bar, Go/Refresh/Clear controls, a simulated browser chrome, and a sandboxed iframe for loading external URLs.",
-  "frontend/src/components/GamesSection.tsx": "Games section that merges backend games with 6 fallback HTML5 game entries, renders them in a responsive grid, and manages the active game player modal state.",
+  "frontend/src/components/GamesSection.tsx": "Games section featuring 8 unblocked/proxy-style games (Slope, Cookie Clicker, Run 3, 1v1.LOL, Retro Bowl, Drift Hunters, Moto X3M, Subway Surfers) inspired by Hypcal/Totally Science, with a responsive grid and GamePlayer modal.",
   "frontend/src/components/GameCard.tsx": "Individual game card with thumbnail (or emoji fallback), title, description, hover play overlay, and a Play Now button styled with neon green accents.",
   "frontend/src/components/GamePlayer.tsx": "Full-screen modal overlay with a sandboxed iframe for playing browser games, header with game title, open-in-new-tab, and close (Esc) controls.",
-  "frontend/src/components/ShowsSection.tsx": "Shows section that merges backend shows with 6 fallback YouTube playlist entries, renders them in a responsive grid, and manages the active video player modal state.",
+  "frontend/src/components/ShowsSection.tsx": "Shows section featuring 9 popular TV shows including Breaking Bad, The Office, Game of Thrones, Stranger Things, Peaky Blinders, The Sopranos, The Wire, Better Call Saul, and The Last of Us — each with YouTube trailer embeds and thumbnail images.",
   "frontend/src/components/ShowCard.tsx": "Individual show card with thumbnail, title, description, hover play overlay, a \"Series\" badge, and a Watch Now button styled with neon purple accents.",
   "frontend/src/components/VideoPlayer.tsx": "Full-screen modal overlay with a 16:9 aspect-ratio iframe for embedding YouTube/video content, header with show title, open-in-new-tab, and close (Esc) controls.",
-  "frontend/src/components/Footer.tsx": "Site footer with NexHub branding, section navigation links, caffeine.ai attribution with UTM tracking, and dynamic copyright year.",
+  "frontend/src/components/Footer.tsx": "Site footer with \"zakariasadeq7site123\" branding, section navigation links, caffeine.ai attribution with UTM tracking, and dynamic copyright year.",
   "frontend/src/index.css": "Global dark-theme CSS with OKLCH color tokens for neon cyan/green/purple accents, Space Grotesk + Inter fonts, hero gradient utility, and grid pattern background.",
   "frontend/tailwind.config.js": "Extended Tailwind config with Space Grotesk/Inter font families, neon-cyan/green/purple color tokens mapped to CSS variables, custom border radii, and neon box-shadow utilities.",
-  "frontend/index.html": "HTML entry point with updated title and meta description for NexHub."
+  "frontend/index.html": "HTML entry point with updated title \"zakariasadeq7site123\" and matching meta description."
 }

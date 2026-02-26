@@ -1,220 +1,70 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T22:40:20.194Z",
+  "generatedAt": "2026-02-26T22:58:11.566Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 7,
-    "implemented": 6,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Design a bold, dark-themed visual identity for the site with a neon accent color scheme (e.g., electric green or cyan on near-black backgrounds), modern sans-serif typography, and a consistent card-based layout across all sections. Apply the theme globally.",
+        "id": "REQ-10",
+        "summary": "Update the Shows section to include Breaking Bad and at least 5 other popular TV shows (e.g., The Office, Game of Thrones, Stranger Things, Breaking Bad, The Wire, Peaky Blinders, The Sopranos). Each show card should display a title, cover image or emoji fallback, a short description, and a Watch Now button that loads an official YouTube trailer or highlight embed in the VideoPlayer modal. Update the backend hardcoded shows array to reflect these new entries.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js"
+          "frontend/src/components/ShowsSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js"
+          "frontend/src/components/ShowsSection.tsx"
         ]
       },
       {
-        "id": "REQ-2",
-        "summary": "Create a top navigation bar with the site logo/name and links to three main sections: Proxy, Games, and Shows. The active section should be visually highlighted.",
+        "id": "REQ-8",
+        "summary": "Rebrand the entire site to 'zakariasadeq7site123'. Update the site name in the Navigation logo, HeroSection headline/logo, Footer, and the HTML title tag in index.html so that 'zakariasadeq7site123' appears consistently everywhere 'NexHub' currently appears.",
         "status": "implemented",
         "plannedFiles": [
+          "frontend/index.html",
           "frontend/src/components/Navigation.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/Footer.tsx"
         ],
         "matchedFiles": [
+          "frontend/index.html",
           "frontend/src/components/Navigation.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Build a Proxy section that embeds an iframe-based web proxy allowing users to type a URL and load it inside the page. Include a URL input field, a 'Go' button, and a full-width iframe display area below the input.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ProxySection.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ProxySection.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "Build a Games section displaying a grid of playable browser games as cards. Each card shows a game title, a thumbnail image, and a Play button. Clicking Play loads the game in an iframe overlay or dedicated view within the page. Include at least 6 game entries (e.g., Snake, Tetris, 2048, Pac-Man, Flappy Bird, Minesweeper) as embedded HTML5 or iframe games from publicly accessible sources.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/GamesSection.tsx",
-          "frontend/src/components/GameCard.tsx",
-          "frontend/src/components/GamePlayer.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/GamesSection.tsx",
-          "frontend/src/components/GameCard.tsx",
-          "frontend/src/components/GamePlayer.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Build a Shows section displaying a grid of show/video content cards. Each card shows a show title, a cover image, and a Watch button. Clicking Watch loads the video content in an embedded iframe (e.g., from a public YouTube playlist or embed URL). Include at least 6 show entries.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ShowsSection.tsx",
-          "frontend/src/components/ShowCard.tsx",
-          "frontend/src/components/VideoPlayer.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ShowsSection.tsx",
-          "frontend/src/components/ShowCard.tsx",
-          "frontend/src/components/VideoPlayer.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-6",
-        "summary": "Create a hero/landing section at the top of the homepage with a headline, a short tagline describing the site (e.g., 'Browse freely. Play games. Watch shows.'), and quick-access buttons linking to each section.",
-        "status": "implemented",
-        "plannedFiles": [
           "frontend/src/components/HeroSection.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/Footer.tsx"
         ]
       },
       {
-        "id": "REQ-7",
-        "summary": "Store a static list of games and shows in the backend as stable data records (title, description, embed URL, thumbnail URL). Expose query functions to retrieve all games and all shows.",
-        "status": "unknown",
-        "plannedFiles": [],
-        "matchedFiles": []
+        "id": "REQ-9",
+        "summary": "Update the Games section to feature unblocked/proxy-style games inspired by Hypcal and Totally Science. Replace the current game list with at least 6 popular unblocked games such as Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, and Retro Bowl, using their publicly accessible embed or iframe URLs. Update the backend hardcoded games array to reflect these new entries (title, description, embed URL, thumbnail URL).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/GamesSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/GamesSection.tsx"
+        ]
       }
     ]
   },
   "changedFiles": [
-    "backend/blob-storage/Mixin.mo",
-    "backend/blob-storage/Storage.mo",
     "backend/main.mo",
+    "backend/migration.mo",
     "build-request.json",
-    "build-template/Dockerfile",
-    "build-template/LICENSE",
     "build-template/README.md",
-    "build-template/deploy.sh",
-    "build-template/icp.yaml",
-    "build-template/package.json",
-    "build-template/pnpm-lock.yaml",
-    "build-template/pnpm-workspace.yaml",
-    "build-template/scripts/prune-unused-images.js",
-    "build-template/scripts/resize-images.js",
-    "build-template/src/backend/canister.yaml",
-    "build-template/src/backend/system-idl/aaaaa-aa.did",
-    "build-template/src/frontend/canister.yaml",
-    "build-template/src/frontend/components.json",
-    "build-template/src/frontend/env.json",
-    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
-    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
-    "build-template/src/frontend/eslint.config.js",
-    "build-template/src/frontend/package.json",
-    "build-template/src/frontend/postcss.config.js",
-    "build-template/src/frontend/src/components/ui/accordion.tsx",
-    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
-    "build-template/src/frontend/src/components/ui/alert.tsx",
-    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
-    "build-template/src/frontend/src/components/ui/avatar.tsx",
-    "build-template/src/frontend/src/components/ui/badge.tsx",
-    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
-    "build-template/src/frontend/src/components/ui/button.tsx",
-    "build-template/src/frontend/src/components/ui/calendar.tsx",
-    "build-template/src/frontend/src/components/ui/card.tsx",
-    "build-template/src/frontend/src/components/ui/carousel.tsx",
-    "build-template/src/frontend/src/components/ui/chart.tsx",
-    "build-template/src/frontend/src/components/ui/checkbox.tsx",
-    "build-template/src/frontend/src/components/ui/collapsible.tsx",
-    "build-template/src/frontend/src/components/ui/command.tsx",
-    "build-template/src/frontend/src/components/ui/context-menu.tsx",
-    "build-template/src/frontend/src/components/ui/dialog.tsx",
-    "build-template/src/frontend/src/components/ui/drawer.tsx",
-    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
-    "build-template/src/frontend/src/components/ui/form.tsx",
-    "build-template/src/frontend/src/components/ui/hover-card.tsx",
-    "build-template/src/frontend/src/components/ui/input-otp.tsx",
-    "build-template/src/frontend/src/components/ui/input.tsx",
-    "build-template/src/frontend/src/components/ui/label.tsx",
-    "build-template/src/frontend/src/components/ui/menubar.tsx",
-    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
-    "build-template/src/frontend/src/components/ui/pagination.tsx",
-    "build-template/src/frontend/src/components/ui/popover.tsx",
-    "build-template/src/frontend/src/components/ui/progress.tsx",
-    "build-template/src/frontend/src/components/ui/radio-group.tsx",
-    "build-template/src/frontend/src/components/ui/resizable.tsx",
-    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
-    "build-template/src/frontend/src/components/ui/select.tsx",
-    "build-template/src/frontend/src/components/ui/separator.tsx",
-    "build-template/src/frontend/src/components/ui/sheet.tsx",
-    "build-template/src/frontend/src/components/ui/sidebar.tsx",
-    "build-template/src/frontend/src/components/ui/skeleton.tsx",
-    "build-template/src/frontend/src/components/ui/slider.tsx",
-    "build-template/src/frontend/src/components/ui/sonner.tsx",
-    "build-template/src/frontend/src/components/ui/switch.tsx",
-    "build-template/src/frontend/src/components/ui/table.tsx",
-    "build-template/src/frontend/src/components/ui/tabs.tsx",
-    "build-template/src/frontend/src/components/ui/textarea.tsx",
-    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
-    "build-template/src/frontend/src/components/ui/toggle.tsx",
-    "build-template/src/frontend/src/components/ui/tooltip.tsx",
-    "build-template/src/frontend/src/hooks/use-mobile.tsx",
-    "build-template/src/frontend/src/lib/utils.ts",
-    "build-template/src/frontend/tsconfig.json",
-    "build-template/src/frontend/vite.config.js",
-    "build-template/tsconfig.json",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.css",
     "frontend/index.html",
-    "frontend/public/assets/generated/game-thumb-default.dim_400x240.png",
-    "frontend/public/assets/generated/hero-banner.dim_1200x400.png",
-    "frontend/public/assets/generated/nexhub-logo.dim_128x128.png",
-    "frontend/public/assets/generated/show-thumb-default.dim_400x240.png",
-    "frontend/src/App.tsx",
-    "frontend/src/backend.d.ts",
-    "frontend/src/backend.ts",
     "frontend/src/components/Footer.tsx",
-    "frontend/src/components/GameCard.tsx",
-    "frontend/src/components/GamePlayer.tsx",
     "frontend/src/components/GamesSection.tsx",
     "frontend/src/components/HeroSection.tsx",
     "frontend/src/components/Navigation.tsx",
-    "frontend/src/components/ProxySection.tsx",
-    "frontend/src/components/ShowCard.tsx",
     "frontend/src/components/ShowsSection.tsx",
-    "frontend/src/components/VideoPlayer.tsx",
-    "frontend/src/config.ts",
-    "frontend/src/declarations/backend.did.d.ts",
-    "frontend/src/declarations/backend.did.js",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/hooks/useQueries.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/src/ui-summary.json",
-    "frontend/src/utils/StorageClient.ts",
-    "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

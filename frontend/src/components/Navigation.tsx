@@ -59,7 +59,7 @@ export function Navigation() {
               <Zap className="w-4 h-4 text-neon-cyan" />
             </div>
             <span className="text-xl font-black tracking-tight text-foreground">
-              Nex<span className="text-neon-cyan">Hub</span>
+              zakariasadeq7<span className="text-neon-cyan">site123</span>
             </span>
           </a>
 

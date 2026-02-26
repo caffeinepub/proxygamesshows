@@ -1,11 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "A website featuring a web proxy, online games, and shows/streaming content.",
+  "projectStateVersion": 5,
+  "summary": "A website named zakariasadeq7site123 featuring a web proxy, unblocked/proxy-style online games (inspired by Hypcal/Totally Science), and popular TV shows streaming section (including Breaking Bad and others via YouTube embeds). Branding updated to zakariasadeq7site123 throughout.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Dark neon-themed hero banner with abstract glowing grid lines and a subtle cityscape silhouette (hero-banner.dim_1200x400.png)\n- Neon-style logo mark icon with an abstract 'N' or hub symbol in cyan on dark background (nexhub-logo.dim_128x128.png)\n- Placeholder game card thumbnail with a retro pixel-art controller icon on dark background (game-thumb-default.dim_400x240.png)\n- Placeholder show card thumbnail with a retro film reel icon on dark background (show-thumb-default.dim_400x240.png)",
   "existing_features": [
     {
       "id": "feature-design-a-bold-dark-themed-visual-identity-for-the-site-with-a-neon-accent-color-scheme-e-g-electric-green-or-cyan-on-near-black-backgrounds-modern-sans-serif-typography-and-a-consistent-card-based-layout-across-all-sections-apply-the-theme-globally",
@@ -54,6 +53,30 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-rebrand-the-entire-site-to-zakariasadeq7site123-update-the-site-name-in-the-navigation-logo-herosection-headline-logo-footer-and-the-html-title-tag-in-index-html-so-that-zakariasadeq7site123-appears-consistently-everywhere-nexhub-currently-appears",
+      "title": "Rebrand the entire site to 'zakariasadeq7site123'. Update the site name in the Navigation logo, HeroSection headline/logo, Footer, and the HTML title tag in index.html so that 'zakariasadeq7site123' appears consistently everywhere 'NexHub' currently appears.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-games-section-to-feature-unblocked-proxy-style-games-inspired-by-hypcal-and-totally-science-replace-the-current-game-list-with-at-least-6-popular-unblocked-games-such-as-slope-1v1-lol-cookie-clicker-run-3-drift-hunters-and-retro-bowl-using-their-publicly-accessible-embed-or-iframe-urls-update-the-backend-hardcoded-games-array-to-reflect-these-new-entries-title-description-embed-url-thumbnail-url",
+      "title": "Update the Games section to feature unblocked/proxy-style games inspired by Hypcal and Totally Science. Replace the current game list with at least 6 popular unblocked games such as Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, and Retro Bowl, using their publicly accessible embed or iframe URLs. Update the backend hardcoded games array to reflect these new entries (title, description, embed URL, thumbnail URL).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-shows-section-to-include-breaking-bad-and-at-least-5-other-popular-tv-shows-e-g-the-office-game-of-thrones-stranger-things-breaking-bad-the-wire-peaky-blinders-the-sopranos-each-show-card-should-display-a-title-cover-image-or-emoji-fallback-a-short-description-and-a-watch-now-button-that-loads-an-official-youtube-trailer-or-highlight-embed-in-the-videoplayer-modal-update-the-backend-hardcoded-shows-array-to-reflect-these-new-entries",
+      "title": "Update the Shows section to include Breaking Bad and at least 5 other popular TV shows (e.g., The Office, Game of Thrones, Stranger Things, Breaking Bad, The Wire, Peaky Blinders, The Sopranos). Each show card should display a title, cover image or emoji fallback, a short description, and a Watch Now button that loads an official YouTube trailer or highlight embed in the VideoPlayer modal. Update the backend hardcoded shows array to reflect these new entries.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -82,10 +105,28 @@
         "REQ-7"
       ],
       "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Rebrand the site name to 'zakariasadeq7site123' across nav, hero section, and all branding",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Update games section to feature unblocked/proxy-style games inspired by Hypcal/Totally Science (e.g., Slope, 1v1.LOL, Cookie Clicker, Run 3)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Update shows section to include Breaking Bad and other popular TV shows with YouTube trailer/embed links",
+      "reqIds": [],
+      "status": "pending"
     }
   ],
   "gameProjectType": "none",
-  "projectName": "ProxyGamesShows",
+  "projectName": "zakariasadeq7site123",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

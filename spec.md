@@ -1,15 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Build NexHub, a dark-themed entertainment hub with three main sections: a web proxy, a browser games library, and a shows/video library.
+**Goal:** Rebrand the site from "NexHub" to "zakariasadeq7site123", update the Games section with popular unblocked games, and update the Shows section with Breaking Bad and other popular TV shows.
 
 **Planned changes:**
-- Apply a global dark theme with neon accent colors (cyan/electric green), modern sans-serif typography, and card-based layouts across all pages
-- Add a top navigation bar with the NexHub logo and links to Proxy, Games, and Shows sections, with active-link highlighting
-- Create a hero section with a headline, tagline ("Browse freely. Play games. Watch shows."), and CTA buttons linking to each section
-- Build a Proxy section with a URL input field, a "Go" button, and a full-width iframe that loads the entered URL
-- Build a Games section displaying a responsive grid of at least 6 game cards (Snake, Tetris, 2048, Pac-Man, Flappy Bird, Minesweeper), each with a title, thumbnail, and Play button that loads the game in an iframe overlay
-- Build a Shows section displaying a responsive grid of at least 6 show cards, each with a title, cover image, and Watch button that opens the video in an embedded iframe or modal
-- Store static lists of games and shows in the backend with fields: id, title, description, embedUrl, thumbnailUrl; expose query functions to retrieve each list
+- Replace all instances of "NexHub" with "zakariasadeq7site123" in the Navigation logo, HeroSection, Footer, and HTML title tag
+- Update the backend games array with at least 6 unblocked/proxy-style games (Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, Retro Bowl) including their embed URLs and descriptions
+- Update the frontend Games section to display the new game entries with Play Now buttons that open games in the GamePlayer modal iframe
+- Update the backend shows array with at least 6 popular TV shows including Breaking Bad, The Office, Game of Thrones, Stranger Things, The Wire, and Peaky Blinders, each with a YouTube trailer embed URL and description
+- Update the frontend Shows section to display the new show entries with Watch Now buttons that open YouTube trailers in the VideoPlayer modal
 
-**User-visible outcome:** Users can visit NexHub, browse the landing page, use the iframe proxy to load websites, play browser-based games, and watch embedded show/video content — all without logging in.
+**User-visible outcome:** The site is fully rebranded to "zakariasadeq7site123", the Games section features popular unblocked games playable via iframe, and the Shows section includes Breaking Bad and other popular TV shows with watchable YouTube trailers.

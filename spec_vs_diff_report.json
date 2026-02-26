@@ -1,75 +1,44 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T22:40:20.190Z",
-  "summary": "The diff implements most requirements well. REQ-1 through REQ-6 are fully addressed in the frontend with a dark neon theme, navigation, proxy section, games grid, shows grid, and hero section. REQ-7 is partially implemented: the backend has query functions and records, but the records are missing the required 'id' field, and there are only 2 games and 2 shows stored. Additionally, the backend uses 'example.com' placeholder embed/thumbnail URLs rather than publicly accessible sources.",
-  "missing_requirements": [
-    {
-      "id": "REQ-7",
-      "requirement": "Each record includes at minimum: id, title, description, embedUrl, thumbnailUrl",
-      "reason": "The Game and Show types in backend/main.mo do not include an 'id' field. Only title, description, embedUrl, and thumbnailUrl are defined.",
-      "evidence": [
-        "backend/main.mo"
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "requirement": "Store a static list of games and shows in the backend as stable data records with publicly accessible embed URLs",
-      "reason": "The backend only stores 2 games and 2 shows, and all embed/thumbnail URLs are 'example.com' placeholders rather than publicly accessible sources. The frontend compensates with fallback data, but the backend itself does not fulfill the requirement.",
-      "evidence": [
-        "backend/main.mo"
-      ]
-    }
-  ],
+  "generatedAt": "2026-02-26T22:58:11.561Z",
+  "summary": "All three requirements are well-implemented in the diff. REQ-8 (rebranding to zakariasadeq7site123) is fully addressed across Navigation, HeroSection, Footer, and index.html. REQ-9 (unblocked games) is implemented with 8 games in the frontend fallback and 6 in the backend. REQ-10 (shows with Breaking Bad and others) is implemented with 9 shows in the frontend fallback and 7+ in the backend. All acceptance criteria appear to be met.",
+  "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Internet Identity / authentication infrastructure (InternetIdentityProvider, useInternetIdentity hook, AuthClient integration)",
-      "reason": "The build request explicitly states 'Do not implement user authentication or login walls' and lists user accounts as a non-goal, yet a full Internet Identity auth system is wired into the app.",
+      "description": "A migration module (migration.mo) was added to the backend with a Migration.run function that resets games and shows arrays to empty arrays.",
+      "reason": "The build request did not request any backend migration infrastructure or module. This is extra scaffolding not asked for.",
       "evidence": [
-        "frontend/src/hooks/useInternetIdentity.ts",
-        "frontend/src/main.tsx",
-        "frontend/src/hooks/useActor.ts"
+        "backend/migration.mo",
+        "backend/main.mo"
       ]
     },
     {
-      "description": "Refresh and Clear buttons in the Proxy section beyond the specified Go button",
-      "reason": "REQ-3 only specifies a URL input field and a Go button. Refresh and Clear controls were added beyond the specification.",
+      "description": "Additional fallback games beyond the 6 specifically requested (Moto X3M and Subway Surfers) were added to the frontend games list.",
+      "reason": "The build request specified at least 6 games (Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, Retro Bowl). Adding Moto X3M and Subway Surfers was not requested, though it does not conflict with any requirement.",
       "evidence": [
-        "frontend/src/components/ProxySection.tsx"
+        "frontend/src/components/GamesSection.tsx"
       ]
     },
     {
-      "description": "Footer component with caffeine.ai attribution and UTM tracking",
-      "reason": "No footer was requested in the build specification.",
+      "description": "Additional fallback shows beyond the 6 requested (Better Call Saul and The Last of Us) were added to the frontend shows list.",
+      "reason": "The build request listed specific shows to include but did not request Better Call Saul or The Last of Us. These are extra entries not mentioned in the requirements.",
       "evidence": [
-        "frontend/src/components/Footer.tsx"
+        "frontend/src/components/ShowsSection.tsx"
       ]
     }
   ],
-  "confidence": 0.85,
+  "confidence": 0.88,
   "changed_files": [
-    "all_files_summary.json",
     "backend/main.mo",
+    "backend/migration.mo",
     "frontend-file-summaries.txt",
-    "frontend/index.css",
     "frontend/index.html",
-    "frontend/src/App.tsx",
     "frontend/src/components/Footer.tsx",
-    "frontend/src/components/GameCard.tsx",
-    "frontend/src/components/GamePlayer.tsx",
     "frontend/src/components/GamesSection.tsx",
     "frontend/src/components/HeroSection.tsx",
     "frontend/src/components/Navigation.tsx",
-    "frontend/src/components/ProxySection.tsx",
-    "frontend/src/components/ShowCard.tsx",
     "frontend/src/components/ShowsSection.tsx",
-    "frontend/src/components/VideoPlayer.tsx",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/hooks/useQueries.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/tailwind.config.js",
     "project_state.json"
   ]
 }

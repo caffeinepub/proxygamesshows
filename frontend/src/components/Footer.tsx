@@ -2,7 +2,7 @@ import { Zap, Heart } from 'lucide-react';
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const appId = encodeURIComponent(window.location.hostname || 'nexhub');
+  const appId = encodeURIComponent(window.location.hostname || 'zakariasadeq7site123');
 
   return (
     <footer className="border-t border-border bg-card/50 py-10 px-4 sm:px-6 lg:px-8">
@@ -14,7 +14,7 @@ export function Footer() {
               <Zap className="w-3.5 h-3.5 text-neon-cyan" />
             </div>
             <span className="font-black text-lg text-foreground">
-              Nex<span className="text-neon-cyan">Hub</span>
+              zakariasadeq7<span className="text-neon-cyan">site123</span>
             </span>
           </div>
 
@@ -42,7 +42,7 @@ export function Footer() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-border text-center text-xs text-muted-foreground/50">
-          © {year} NexHub. All rights reserved.
+          © {year} zakariasadeq7site123. All rights reserved.
         </div>
       </div>
     </footer>

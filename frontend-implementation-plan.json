@@ -1,154 +1,74 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Entertainment Hub with Proxy, Games, and Shows",
+  "title": "Rebrand to zakariasadeq7site123, update games to unblocked style, and update shows with Breaking Bad + popular TV",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Apply dark-themed visual identity with neon accents globally",
+      "id": "REQ-8",
+      "summary": "Rebrand the entire site from 'NexHub' to 'zakariasadeq7site123' across all UI touchpoints including Navigation, HeroSection, Footer, and HTML title tag",
       "acceptanceCriteria": [
-        "All pages share the same dark background and neon accent colors",
-        "Typography is consistent across headings, labels, and body text",
-        "No unstyled or default-browser-styled elements are visible"
+        "The browser tab title reads 'zakariasadeq7site123'",
+        "The Navigation bar logo/name displays 'zakariasadeq7site123'",
+        "The HeroSection displays 'zakariasadeq7site123' as the site name",
+        "The Footer displays 'zakariasadeq7site123' as the site logo/name",
+        "No instance of the old name 'NexHub' remains visible in the UI"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Define global CSS variables for dark theme with neon accent colors (electric cyan), set body background to near-black, apply consistent modern sans-serif typography, and establish base styles for all elements"
+          "description": "Update the <title> tag and meta description to replace 'NexHub' with 'zakariasadeq7site123' so the browser tab displays the new site name"
         },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend Tailwind theme with custom dark background colors, neon accent colors (cyan primary, electric green secondary), and configure typography plugin for consistent font scale across the application"
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Create top navigation bar with logo and section links",
-      "acceptanceCriteria": [
-        "Navigation bar is visible on all pages",
-        "Clicking each nav link scrolls to or navigates to the correct section",
-        "Active section link has a distinct visual indicator"
-      ],
-      "file_operations": [
         {
           "path": "frontend/src/components/Navigation.tsx",
-          "operation": "create",
-          "description": "Create Navigation component with site logo/name 'NexHub', three navigation links (Proxy, Games, Shows) with smooth scroll behavior, active link highlighting using intersection observer or scroll position tracking, and dark theme styling with neon accents"
+          "operation": "modify",
+          "description": "Replace all instances of 'NexHub' in the logo area and navigation branding with 'zakariasadeq7site123' to reflect the new site name in the top navigation bar"
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Import and render Navigation component at the top of the app layout, above all section content"
+          "description": "Update the headline and logo text from 'NexHub' to 'zakariasadeq7site123' in the hero section to display the new site branding prominently on the landing area"
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Replace 'NexHub' with 'zakariasadeq7site123' in the footer logo and branding text to ensure consistent site naming at the bottom of the page"
         }
       ]
     },
     {
-      "id": "REQ-3",
-      "summary": "Build iframe-based web proxy section",
+      "id": "REQ-9",
+      "summary": "Update the Games section to feature at least 6 unblocked/proxy-style games (Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, Retro Bowl) with publicly accessible embed URLs, replacing the current game list",
       "acceptanceCriteria": [
-        "Users can type a URL and click Go to load a site in the iframe",
-        "The iframe is displayed below the input in a clearly bounded container",
-        "Input field has placeholder text like 'Enter a URL...'",
-        "HTTPS URLs are accepted and passed to the iframe src"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ProxySection.tsx",
-          "operation": "create",
-          "description": "Create ProxySection component with a URL input field (placeholder 'Enter a URL...'), Go button, and full-width iframe container. Implement state management for URL input and iframe src, validate HTTPS URLs, and style with dark theme card layout"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render ProxySection component with an id='proxy' attribute for navigation anchor targeting"
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Build Games section with playable browser games grid",
-      "acceptanceCriteria": [
-        "At least 6 game cards are displayed in a responsive grid",
-        "Each card has a title, thumbnail, and Play button",
-        "Clicking Play loads the game in an iframe or inline view",
-        "Games are accessible without login"
+        "At least 6 unblocked/proxy-style games are displayed in the Games section grid",
+        "Each game card shows a title, thumbnail (or emoji fallback), and a Play Now button",
+        "Clicking Play Now opens the game in the GamePlayer modal iframe",
+        "Games are inspired by the Hypcal/Totally Science catalog (Slope, Run 3, Cookie Clicker, etc.)",
+        "Backend games array is updated with the new game entries"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/GamesSection.tsx",
-          "operation": "create",
-          "description": "Create GamesSection component that fetches games from backend.getAllGames(), displays them in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile) with GameCard sub-components, and manages game player modal/overlay state. Use the generated placeholder thumbnail at frontend/public/assets/generated/game-thumb-default.dim_400x240.png as fallback for any missing game thumbnails"
-        },
-        {
-          "path": "frontend/src/components/GameCard.tsx",
-          "operation": "create",
-          "description": "Create GameCard component displaying game title, thumbnail image, and Play button with dark theme card styling and neon accent hover effects. Handle click to trigger parent callback for loading game"
-        },
-        {
-          "path": "frontend/src/components/GamePlayer.tsx",
-          "operation": "create",
-          "description": "Create GamePlayer component as a modal/overlay with iframe for embedding game content, close button, and full-screen dark backdrop. Accept embedUrl prop and load game in iframe"
-        },
-        {
-          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and render GamesSection component with an id='games' attribute for navigation anchor targeting"
+          "description": "Replace the hardcoded fallback games array with at least 6 unblocked/proxy-style games including Slope, 1v1.LOL, Cookie Clicker, Run 3, Drift Hunters, and Retro Bowl. Each entry should include title, description, embedUrl (publicly accessible iframe URL), and thumbnailUrl (or emoji fallback). Ensure the GamePlayer modal can load these iframe URLs when Play Now is clicked"
         }
       ]
     },
     {
-      "id": "REQ-5",
-      "summary": "Build Shows section with video content grid",
+      "id": "REQ-10",
+      "summary": "Update the Shows section to include Breaking Bad and at least 5 other popular TV shows (The Office, Game of Thrones, Stranger Things, The Wire, Peaky Blinders, The Sopranos), each with a YouTube trailer embed URL accessible via Watch Now button",
       "acceptanceCriteria": [
-        "At least 6 show cards are displayed in a responsive grid",
-        "Each card has a title, cover image, and Watch button",
-        "Clicking Watch opens the video in an embedded iframe or modal",
-        "Show cards are visually distinct from game cards"
+        "Breaking Bad appears as a show entry in the Shows section",
+        "At least 6 popular TV shows are displayed in the Shows section grid",
+        "Each show card shows a title, cover image or emoji fallback, description, and Watch Now button",
+        "Clicking Watch Now opens a YouTube embed for that show's trailer in the VideoPlayer modal",
+        "Backend shows array is updated with the new show entries including YouTube embed URLs"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ShowsSection.tsx",
-          "operation": "create",
-          "description": "Create ShowsSection component that fetches shows from backend.getAllShows(), displays them in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile) with ShowCard sub-components, and manages video player modal state. Use the generated placeholder thumbnail at frontend/public/assets/generated/show-thumb-default.dim_400x240.png as fallback for any missing show thumbnails"
-        },
-        {
-          "path": "frontend/src/components/ShowCard.tsx",
-          "operation": "create",
-          "description": "Create ShowCard component displaying show title, cover image, and Watch button with dark theme card styling distinct from GameCard (e.g., different accent color or border style) and neon accent hover effects. Handle click to trigger parent callback for loading video"
-        },
-        {
-          "path": "frontend/src/components/VideoPlayer.tsx",
-          "operation": "create",
-          "description": "Create VideoPlayer component as a modal/overlay with iframe for embedding video content (YouTube or other embeds), close button, and full-screen dark backdrop. Accept embedUrl prop and load video in iframe with appropriate allow attributes for autoplay"
-        },
-        {
-          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and render ShowsSection component with an id='shows' attribute for navigation anchor targeting"
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Create hero/landing section with headline and quick-access buttons",
-      "acceptanceCriteria": [
-        "Hero section is the first visible element on page load",
-        "Headline and tagline are displayed prominently",
-        "Three CTA buttons link to Proxy, Games, and Shows sections respectively"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "create",
-          "description": "Create HeroSection component with headline 'NexHub', tagline 'Browse freely. Play games. Watch shows.', and three CTA buttons linking to #proxy, #games, and #shows sections with smooth scroll. Use the generated hero banner image at frontend/public/assets/generated/hero-banner.dim_1200x400.png as background, and include the generated logo at frontend/public/assets/generated/nexhub-logo.dim_128x128.png. Style with dark theme, neon text accents, and prominent typography"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render HeroSection component as the first element after Navigation, ensuring it appears at the top of the page on initial load"
+          "description": "Replace the hardcoded fallback shows array with at least 6 popular TV shows including Breaking Bad, The Office, Game of Thrones, Stranger Things, The Wire, Peaky Blinders, and The Sopranos. Each entry should include title, description, embedUrl (YouTube trailer embed URL in format https://www.youtube.com/embed/VIDEO_ID), and thumbnailUrl (or emoji fallback). Ensure the VideoPlayer modal can load these YouTube embeds when Watch Now is clicked"
         }
       ]
     }

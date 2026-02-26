@@ -6,43 +6,61 @@ import { VideoPlayer } from './VideoPlayer';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { Show } from '../backend';
 
-// Fallback shows with real public YouTube embed URLs
+// Fallback popular TV shows with YouTube trailer embeds
 const FALLBACK_SHOWS: Show[] = [
   {
-    title: 'Cosmos: A Spacetime Odyssey',
-    description: 'Explore the universe with Neil deGrasse Tyson',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLSmQ9sTVcqKmqC6yMd_PFZi3XcFBe5dGV',
-    thumbnailUrl: 'https://img.youtube.com/vi/Ld_Gy_Ib0Oc/hqdefault.jpg',
+    title: 'Breaking Bad',
+    description: 'A high school chemistry teacher turned drug kingpin in this critically acclaimed crime drama. Watch the official trailer.',
+    embedUrl: 'https://www.youtube.com/embed/HhesaQXLuRY',
+    thumbnailUrl: 'https://img.youtube.com/vi/HhesaQXLuRY/hqdefault.jpg',
   },
   {
-    title: 'TED Talks: Science',
-    description: 'Inspiring talks from the world\'s greatest thinkers',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL70DEC2B0568B5469',
-    thumbnailUrl: 'https://img.youtube.com/vi/iG9CE55wbtY/hqdefault.jpg',
+    title: 'The Office',
+    description: 'A hilarious mockumentary sitcom about the everyday lives of office employees at Dunder Mifflin.',
+    embedUrl: 'https://www.youtube.com/embed/dVHo1dU1GSo',
+    thumbnailUrl: 'https://img.youtube.com/vi/dVHo1dU1GSo/hqdefault.jpg',
   },
   {
-    title: 'National Geographic Shorts',
-    description: 'Stunning nature and wildlife documentaries',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLivjPDlt6ApSiD2mk9Ngp-5dZ9CDDn9d0',
-    thumbnailUrl: 'https://img.youtube.com/vi/LfvhJB7pgXI/hqdefault.jpg',
+    title: 'Game of Thrones',
+    description: 'Epic fantasy series of power, betrayal, and dragons based on George R.R. Martin\'s novels.',
+    embedUrl: 'https://www.youtube.com/embed/BpJYNVhGf1s',
+    thumbnailUrl: 'https://img.youtube.com/vi/BpJYNVhGf1s/hqdefault.jpg',
   },
   {
-    title: 'History of the World',
-    description: 'Journey through the most pivotal moments in history',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLTve67GFT3A3HnSMFBHBMFHBMFHBMFHB',
-    thumbnailUrl: 'https://img.youtube.com/vi/xuCn8ux2gbs/hqdefault.jpg',
+    title: 'Stranger Things',
+    description: 'A group of kids uncover supernatural mysteries in their small Indiana town. Watch the season 1 trailer.',
+    embedUrl: 'https://www.youtube.com/embed/b9EkMc79ZSU',
+    thumbnailUrl: 'https://img.youtube.com/vi/b9EkMc79ZSU/hqdefault.jpg',
   },
   {
-    title: 'Crash Course: World History',
-    description: 'Fast-paced educational history series',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLBDA2A52596D59A97',
-    thumbnailUrl: 'https://img.youtube.com/vi/Yocja_N5s1I/hqdefault.jpg',
+    title: 'Peaky Blinders',
+    description: 'British crime drama following the ruthless Shelby crime family in post-WWI Birmingham.',
+    embedUrl: 'https://www.youtube.com/embed/oVzVdvGIC7U',
+    thumbnailUrl: 'https://img.youtube.com/vi/oVzVdvGIC7U/hqdefault.jpg',
   },
   {
-    title: 'PBS Space Time',
-    description: 'Deep dives into physics and cosmology',
-    embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLsPUh22kYmNCGaVGuGfKfJl-6RdHiCjo1',
-    thumbnailUrl: 'https://img.youtube.com/vi/YNEBhwimJWs/hqdefault.jpg',
+    title: 'The Sopranos',
+    description: 'New Jersey mob boss Tony Soprano balances family life and organized crime in this landmark HBO series.',
+    embedUrl: 'https://www.youtube.com/embed/WRuHzYx-8Go',
+    thumbnailUrl: 'https://img.youtube.com/vi/WRuHzYx-8Go/hqdefault.jpg',
+  },
+  {
+    title: 'The Wire',
+    description: 'Gritty crime drama exploring Baltimore through the eyes of law enforcement, drug dealers, and residents.',
+    embedUrl: 'https://www.youtube.com/embed/9qK-VGjMr8g',
+    thumbnailUrl: 'https://img.youtube.com/vi/9qK-VGjMr8g/hqdefault.jpg',
+  },
+  {
+    title: 'Better Call Saul',
+    description: 'The origin story of Breaking Bad\'s beloved con-man lawyer Jimmy McGill becoming Saul Goodman.',
+    embedUrl: 'https://www.youtube.com/embed/HN4oydykJFc',
+    thumbnailUrl: 'https://img.youtube.com/vi/HN4oydykJFc/hqdefault.jpg',
+  },
+  {
+    title: 'The Last of Us',
+    description: 'A post-apocalyptic survival drama following Joel and Ellie across a fungus-ravaged America.',
+    embedUrl: 'https://www.youtube.com/embed/uLtkt8BonwM',
+    thumbnailUrl: 'https://img.youtube.com/vi/uLtkt8BonwM/hqdefault.jpg',
   },
 ];
 
@@ -70,10 +88,10 @@ export function ShowsSection() {
           <span className="text-xs font-bold uppercase tracking-widest text-neon-purple">Shows</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-black text-foreground mb-2">
-          Watch Shows & Docs
+          Popular TV Shows
         </h2>
         <p className="text-muted-foreground max-w-xl">
-          Stream documentaries, educational series, and more — all in one place.
+          Watch trailers for the greatest TV shows of all time — Breaking Bad, Game of Thrones, Stranger Things, and more.
         </p>
       </div>
 

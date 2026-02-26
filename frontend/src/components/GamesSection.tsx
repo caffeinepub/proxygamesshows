@@ -6,42 +6,54 @@ import { GamePlayer } from './GamePlayer';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { Game } from '../backend';
 
-// Fallback games with real public embed URLs
+// Fallback unblocked/proxy-style games inspired by Hypcal/Totally Science
 const FALLBACK_GAMES: Game[] = [
   {
-    title: 'Pac-Man',
-    description: 'Classic arcade maze game',
-    embedUrl: 'https://freepacman.org/',
+    title: 'Slope',
+    description: 'Roll your ball down a steep slope while avoiding obstacles in this fast-paced 3D game.',
+    embedUrl: 'https://slope-game.github.io/',
     thumbnailUrl: '',
   },
   {
-    title: '2048',
-    description: 'Slide tiles to reach 2048',
-    embedUrl: 'https://play2048.co/',
+    title: 'Cookie Clicker',
+    description: 'Addictive incremental game where you bake cookies and expand your cookie empire.',
+    embedUrl: 'https://orteil.dashnet.org/cookieclicker/',
     thumbnailUrl: '',
   },
   {
-    title: 'Tetris',
-    description: 'Classic block stacking puzzle',
-    embedUrl: 'https://tetris.com/play-tetris',
+    title: 'Run 3',
+    description: 'Navigate your character through a series of tunnels in this endless runner platformer.',
+    embedUrl: 'https://www.coolmathgames.com/0-run-3/play',
     thumbnailUrl: '',
   },
   {
-    title: 'Snake',
-    description: 'Classic snake game',
-    embedUrl: 'https://playsnake.org/',
+    title: '1v1.LOL',
+    description: 'Battle it out in this third-person shooter and building game inspired by Fortnite.',
+    embedUrl: 'https://1v1.lol/',
     thumbnailUrl: '',
   },
   {
-    title: 'Minesweeper',
-    description: 'Classic mine-finding puzzle',
-    embedUrl: 'https://minesweeper.online/',
+    title: 'Retro Bowl',
+    description: 'Manage your football team and compete in retro-style American football matches.',
+    embedUrl: 'https://retrobowl.me/',
     thumbnailUrl: '',
   },
   {
-    title: 'Sudoku',
-    description: 'Number placement puzzle',
-    embedUrl: 'https://sudoku.com/',
+    title: 'Drift Hunters',
+    description: 'Customize your car and drift through challenging tracks in this realistic driving simulator.',
+    embedUrl: 'https://drifthunters.io/',
+    thumbnailUrl: '',
+  },
+  {
+    title: 'Moto X3M',
+    description: 'Race through insane obstacle courses on your motorbike in this thrilling stunt game.',
+    embedUrl: 'https://www.coolmathgames.com/0-moto-x3m/play',
+    thumbnailUrl: '',
+  },
+  {
+    title: 'Subway Surfers',
+    description: 'Dash through the subway, dodge trains, and collect coins in this endless runner.',
+    embedUrl: 'https://poki.com/en/g/subway-surfers',
     thumbnailUrl: '',
   },
 ];
@@ -70,10 +82,10 @@ export function GamesSection() {
           <span className="text-xs font-bold uppercase tracking-widest text-neon-green">Games</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-black text-foreground mb-2">
-          Play Browser Games
+          Unblocked Browser Games
         </h2>
         <p className="text-muted-foreground max-w-xl">
-          Jump into classic and modern browser games — no downloads, no login required.
+          Play the best unblocked games — Slope, Run 3, Cookie Clicker, and more. No downloads, no login required.
         </p>
       </div>
 
