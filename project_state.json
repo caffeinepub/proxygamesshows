@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "A website named zakariasadeq7site123 featuring a web proxy, unblocked/proxy-style online games, TV shows/movies streaming, an Apps section with cloaked iframe access to TikTok/Snapchat/Instagram/YouTube/Discord/Twitter, and a Hacks section with game cheats, browser tricks, keyboard shortcuts, and tech hacks. UI is being redesigned to match an EDUrocks-style 2-column card grid layout with dark maroon/near-black background and neon blue accent color. Adding Music and Live TV sections. All 7 sections accessible from navigation.",
+  "projectStateVersion": 13,
+  "summary": "A website named zakariasadeq7site123 featuring a web proxy, unblocked/proxy-style online games (expanding to 100 games), TV shows/movies streaming (expanding to 100 shows/movies), an Apps section with cloaked iframe access to TikTok/Snapchat/Instagram/YouTube/Discord/Twitter, and a Hacks section with game cheats, browser tricks, keyboard shortcuts, and tech hacks. UI is being redesigned to match an EDUrocks-style 2-column card grid layout with dark maroon/near-black background and neon blue accent color. Adding Music and Live TV sections. All 7 sections accessible from navigation.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
@@ -173,6 +173,22 @@
         "REQ-24"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-gamessection-tsx-to-handle-and-display-the-expanded-list-of-100-games-update-the-hardcoded-fallback-games-array-in-gamessection-tsx-to-mirror-the-full-100-game-backend-list-ensure-the-responsive-grid-layout-renders-correctly-with-the-larger-dataset-consider-adding-a-search-filter-input-or-genre-filter-badges-so-users-can-browse-the-large-catalog-the-existing-gameplayer-modal-must-remain-functional-for-all-game-entries",
+      "title": "Update GamesSection.tsx to handle and display the expanded list of 100 games. Update the hardcoded fallback games array in GamesSection.tsx to mirror the full 100-game backend list. Ensure the responsive grid layout renders correctly with the larger dataset — consider adding a search/filter input or genre filter badges so users can browse the large catalog. The existing GamePlayer modal must remain functional for all game entries.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-showssection-tsx-to-handle-and-display-the-expanded-list-of-100-shows-movies-update-the-hardcoded-fallback-shows-array-in-showssection-tsx-to-mirror-the-full-100-entry-backend-list-ensure-the-responsive-grid-layout-renders-correctly-with-the-larger-dataset-consider-adding-a-search-filter-input-or-genre-filter-badges-the-existing-videoplayer-modal-must-remain-functional-for-all-show-movie-entries",
+      "title": "Update ShowsSection.tsx to handle and display the expanded list of 100 shows/movies. Update the hardcoded fallback shows array in ShowsSection.tsx to mirror the full 100-entry backend list. Ensure the responsive grid layout renders correctly with the larger dataset — consider adding a search/filter input or genre filter badges. The existing VideoPlayer modal must remain functional for all show/movie entries.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -294,6 +310,34 @@
       "id": "AR-25",
       "summary": "Update navigation to include all 7 sections: Games, Proxy, Movies & TV, Apps, Hacks, Music, Live TV",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Expand Games section to at least 100 games covering a wide variety of genres with publicly accessible embed URLs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Expand Movies & TV section to at least 100 shows/movies with YouTube trailer/embed links",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Expand the backend hardcoded games array in backend/main.mo to at least 100 total game entries. Include a wide variety of genres (action, puzzle, arcade, racing, strategy, IO, platformer, sports, shooter, idle, etc.). Each entry must have title, description, embedUrl (publicly accessible iframe/embed URL), and thumbnailUrl fields. Retain all existing game entries and add new ones to reach the 100-game target. Use publicly accessible embed URLs from sources like CrazyGames, Poki, itch.io, or direct game hosting URLs.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Expand the backend hardcoded shows array in backend/main.mo to at least 100 total show/movie entries. Include a wide variety of genres (drama, comedy, action, thriller, sci-fi, anime, documentary, horror, romance, crime, fantasy, etc.) and a mix of TV shows and movies. Each entry must have title, description, embedUrl (YouTube trailer embed URL in the format https://www.youtube.com/embed/<videoId>), and thumbnailUrl fields. Retain all existing show entries and add new ones to reach the 100-entry target.",
+      "reqIds": [
+        "REQ-26"
+      ],
       "status": "pending"
     }
   ],

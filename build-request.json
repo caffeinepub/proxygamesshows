@@ -1,133 +1,111 @@
 {
   "kind": "build_request",
-  "title": "EDUrocks-style UI redesign with neon blue theme + Music and Live TV sections",
+  "title": "Expand Games to 100 entries and Movies & TV to 100 entries",
   "projectName": "zakariasadeq7site123",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-20",
-      "text": "Redesign the entire site UI to match the EDUrocks layout shown in the uploaded screenshots: a dark maroon/near-black background (approximately #1a0a1a or #0f0a14), a 2-column responsive card grid as the primary homepage layout, each section card featuring a large rounded-square icon badge, a bold section title, and a short description beneath it. Replace all current neon green/cyan accents with neon blue (#00bfff / electric blue) for icon badge backgrounds, card hover borders, text highlights, buttons, and glow effects. Apply this redesign consistently across Navigation, HeroSection, all section cards, and Footer.",
-      "target": "frontend",
+      "id": "REQ-25",
+      "text": "Expand the backend hardcoded games array in backend/main.mo to at least 100 total game entries. Include a wide variety of genres (action, puzzle, arcade, racing, strategy, IO, platformer, sports, shooter, idle, etc.). Each entry must have title, description, embedUrl (publicly accessible iframe/embed URL), and thumbnailUrl fields. Retain all existing game entries and add new ones to reach the 100-game target. Use publicly accessible embed URLs from sources like CrazyGames, Poki, itch.io, or direct game hosting URLs.",
+      "target": "backend",
       "source": {
         "messageIds": [
-          "msg-6",
-          "msg-8"
+          "msg-4",
+          "msg-6"
         ],
         "quotes": [
-          "Add everything you saw in the pictures please make the colour's but make the color neon blue",
-          "Full UI redesign to match the EDUrocks 2-column card grid layout with dark maroon/near-black background"
+          "Add more games i atleast want 100 games",
+          "I'll expand the Games section to 100 entries"
         ]
       },
       "acceptanceCriteria": [
-        "Background color is a dark maroon/near-black tone matching the EDUrocks screenshots",
-        "All accent colors (icon badges, borders, glow, buttons, active nav links) use neon blue (#00bfff or equivalent)",
-        "Homepage displays a 2-column grid of large section cards, each with a rounded-square icon badge, title, and description",
-        "Card layout is responsive: single column on mobile, 2-column on tablet/desktop",
-        "Navigation, HeroSection, and Footer all use the neon blue accent color",
-        "No remnants of neon green or cyan accent colors remain"
+        "The backend games array contains at least 100 entries",
+        "All entries have non-empty title, description, embedUrl, and thumbnailUrl fields",
+        "Games span at least 8 distinct genres/categories",
+        "All existing game entries are retained",
+        "New embed URLs are publicly accessible iframe-compatible URLs"
       ]
     },
     {
-      "id": "REQ-21",
-      "text": "Update the homepage section card grid to include all 7 sections visible across the uploaded EDUrocks screenshots — Games, Proxy, Movies & TV, Music, Apps, Hacks, and Live TV — each represented as a large 2-column card with a neon blue rounded-square icon (emoji fallback acceptable), a bold title, and a short descriptive subtitle. Clicking a card should smooth-scroll to the corresponding section on the page.",
-      "target": "frontend",
+      "id": "REQ-26",
+      "text": "Expand the backend hardcoded shows array in backend/main.mo to at least 100 total show/movie entries. Include a wide variety of genres (drama, comedy, action, thriller, sci-fi, anime, documentary, horror, romance, crime, fantasy, etc.) and a mix of TV shows and movies. Each entry must have title, description, embedUrl (YouTube trailer embed URL in the format https://www.youtube.com/embed/<videoId>), and thumbnailUrl fields. Retain all existing show entries and add new ones to reach the 100-entry target.",
+      "target": "backend",
       "source": {
         "messageIds": [
-          "msg-6",
-          "msg-8"
+          "msg-4",
+          "msg-6"
         ],
         "quotes": [
-          "Add everything you saw in the pictures please",
-          "Update navigation to include all 7 sections: Games, Proxy, Movies & TV, Apps, Hacks, Music, Live TV"
+          "100 shows/ movies please",
+          "Movies & TV section to 100 entries"
         ]
       },
       "acceptanceCriteria": [
-        "Homepage card grid shows exactly 7 section cards: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV",
-        "Each card has a neon blue rounded-square icon badge, bold title, and short subtitle description",
-        "Clicking any card smooth-scrolls to the matching section anchor",
-        "Cards are arranged in a 2-column grid matching the EDUrocks layout"
+        "The backend shows array contains at least 100 entries",
+        "All entries have non-empty title, description, embedUrl, and thumbnailUrl fields",
+        "Shows/movies span at least 8 distinct genres",
+        "All existing show entries are retained",
+        "embedUrl values follow the YouTube embed format https://www.youtube.com/embed/<videoId>",
+        "A mix of TV shows and movies is represented"
       ]
     },
     {
-      "id": "REQ-22",
-      "text": "Add a new Music section to the page (anchor id='music'). Display a grid of embedded music/radio player cards featuring at least 6 publicly accessible music or internet radio stream embeds (e.g., Lofi Girl YouTube live stream, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP). Each card shows a neon blue styled icon badge, station/stream name, a short description, and a Play/Listen button that loads the embed in an iframe overlay or inline player. Style the section header with neon blue glow text matching the new EDUrocks-inspired theme.",
+      "id": "REQ-27",
+      "text": "Update GamesSection.tsx to handle and display the expanded list of 100 games. Update the hardcoded fallback games array in GamesSection.tsx to mirror the full 100-game backend list. Ensure the responsive grid layout renders correctly with the larger dataset — consider adding a search/filter input or genre filter badges so users can browse the large catalog. The existing GamePlayer modal must remain functional for all game entries.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6",
-          "msg-8"
+          "msg-4"
         ],
         "quotes": [
-          "Add Music section — embedded music/radio player cards",
-          "Stream the library or jump into live radio stations"
+          "Add more games i atleast want 100 games"
         ]
       },
       "acceptanceCriteria": [
-        "A Music section exists on the page with anchor id='music'",
-        "At least 6 music/radio stream cards are displayed in a responsive grid",
-        "Each card shows a neon blue icon badge, stream name, short description, and a Listen/Play button",
-        "Clicking the button loads the stream embed in an iframe overlay or inline player",
-        "Section header uses neon blue glow styling matching the site theme"
+        "GamesSection displays all 100 game entries in the responsive grid",
+        "The fallback hardcoded list in GamesSection.tsx contains at least 100 games matching the backend data",
+        "A search or genre filter UI element is present to help browse 100+ games",
+        "Clicking Play Now on any game opens the GamePlayer modal with the correct embed URL",
+        "Grid layout remains visually consistent with the existing neon blue EDUrocks theme",
+        "No game cards overflow or break the layout"
       ]
     },
     {
-      "id": "REQ-23",
-      "text": "Add a new Live TV section to the page (anchor id='livetv'). Display a grid of at least 6 publicly accessible live TV channel embeds (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24 — all of which offer free public YouTube live embeds or direct iframe embeds). Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button that loads the channel embed in an iframe overlay. Style the section header with neon blue glow text.",
+      "id": "REQ-28",
+      "text": "Update ShowsSection.tsx to handle and display the expanded list of 100 shows/movies. Update the hardcoded fallback shows array in ShowsSection.tsx to mirror the full 100-entry backend list. Ensure the responsive grid layout renders correctly with the larger dataset — consider adding a search/filter input or genre filter badges. The existing VideoPlayer modal must remain functional for all show/movie entries.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6",
-          "msg-8"
+          "msg-4"
         ],
         "quotes": [
-          "Add Live TV section — publicly available live TV channel embeds",
-          "Stream publicly available live TV channels through our player"
+          "100 shows/ movies please"
         ]
       },
       "acceptanceCriteria": [
-        "A Live TV section exists on the page with anchor id='livetv'",
-        "At least 6 live TV channel cards are displayed in a responsive grid",
-        "Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button",
-        "Clicking the button loads the live channel embed in an iframe overlay",
-        "Section header uses neon blue glow styling matching the site theme"
-      ]
-    },
-    {
-      "id": "REQ-24",
-      "text": "Update the Navigation bar to include links to all 7 sections in this order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV. Update the HeroSection CTA buttons and/or the homepage section card grid to link to all 7 sections. Ensure the mobile hamburger menu also lists all 7 links and active section highlighting uses neon blue for the selected link.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-8"
-        ],
-        "quotes": [
-          "Update navigation to include all 7 sections in the new style"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Navigation bar shows links to: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV",
-        "Mobile hamburger menu includes all 7 navigation links",
-        "Active section link is highlighted with neon blue accent",
-        "HeroSection or homepage card grid provides access to all 7 sections"
+        "ShowsSection displays all 100 show/movie entries in the responsive grid",
+        "The fallback hardcoded list in ShowsSection.tsx contains at least 100 entries matching the backend data",
+        "A search or genre filter UI element is present to help browse 100+ titles",
+        "Clicking Watch Now on any entry opens the VideoPlayer modal with the correct YouTube embed URL",
+        "Grid layout remains visually consistent with the existing neon blue EDUrocks theme",
+        "No show cards overflow or break the layout"
       ]
     }
   ],
   "constraints": [
-    "Do not remove or break any existing sections: Games, Proxy, Movies & TV (ShowsSection), Apps, Hacks",
-    "Do not edit files under frontend/src/hooks/ (immutable paths)",
-    "Do not edit files under frontend/src/components/ui/ (immutable paths)",
-    "Do not edit frontend/src/main.tsx (immutable path)",
-    "Retain existing GamePlayer modal for in-page game playback",
-    "Retain existing VideoPlayer modal for show/movie trailer playback",
-    "All iframe embeds must use publicly accessible URLs — no paid or authenticated sources"
+    "All embed URLs for games must be publicly accessible and iframe-compatible",
+    "All show/movie embed URLs must use the YouTube embed format (https://www.youtube.com/embed/<videoId>)",
+    "Retain all existing game and show entries — only add new ones",
+    "Do not modify any files listed in frontend.immutablePaths",
+    "Maintain the existing neon blue EDUrocks dark theme throughout all UI changes",
+    "The GamePlayer and VideoPlayer modals must remain intact and functional"
   ],
   "nonGoals": [
-    "Changing the site name away from zakariasadeq7site123",
-    "Adding a Live Chat section (shown in screenshots but not requested)",
-    "Adding an AI assistant section (shown in screenshots but not requested)",
-    "Backend schema changes for Music or Live TV (hardcoded frontend data is sufficient)",
-    "Real-time WebSocket or push notification features",
-    "User authentication beyond existing Internet Identity setup"
+    "Changing the site's visual theme or color scheme",
+    "Adding or removing any of the 7 existing site sections",
+    "Modifying the Navigation, HeroSection, or SectionCardGrid beyond what is needed for the content expansion",
+    "Adding user authentication or personalization features",
+    "Implementing backend pagination or search — frontend-side filtering is sufficient"
   ],
   "imageRequirements": {
     "required": [],

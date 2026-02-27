@@ -2,20 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-redesign-the-entire-site-ui-to-match-the-edurocks-layout-shown-in-the-uploaded-screenshots-a-dark-maroon-near-black-background-approximately-1a0a1a-or-0f0a14-a-2-column-responsive-card-grid-as-the-primary-homepage-layout-each-section-card-featuring-a-large-rounded-square-icon-badge-a-bold-section-title-and-a-short-description-beneath-it-replace-all-current-neon-green-cyan-accents-with-neon-blue-00bfff-electric-blue-for-icon-badge-backgrounds-card-hover-borders-text-highlights-buttons-and-glow-effects-apply-this-redesign-consistently-across-navigation-herosection-all-section-cards-and-footer",
-      "featureTitle": "Redesign the entire site UI to match the EDUrocks layout shown in the uploaded screenshots: a dark maroon/near-black background (approximately #1a0a1a or #0f0a14), a 2-column responsive card grid as the primary homepage layout, each section card featuring a large rounded-square icon badge, a bold section title, and a short description beneath it. Replace all current neon green/cyan accents with neon blue (#00bfff / electric blue) for icon badge backgrounds, card hover borders, text highlights, buttons, and glow effects. Apply this redesign consistently across Navigation, HeroSection, all section cards, and Footer.",
+      "featureId": "feature-update-gamessection-tsx-to-handle-and-display-the-expanded-list-of-100-games-update-the-hardcoded-fallback-games-array-in-gamessection-tsx-to-mirror-the-full-100-game-backend-list-ensure-the-responsive-grid-layout-renders-correctly-with-the-larger-dataset-consider-adding-a-search-filter-input-or-genre-filter-badges-so-users-can-browse-the-large-catalog-the-existing-gameplayer-modal-must-remain-functional-for-all-game-entries",
+      "featureTitle": "Update GamesSection.tsx to handle and display the expanded list of 100 games. Update the hardcoded fallback games array in GamesSection.tsx to mirror the full 100-game backend list. Ensure the responsive grid layout renders correctly with the larger dataset — consider adding a search/filter input or genre filter badges so users can browse the large catalog. The existing GamePlayer modal must remain functional for all game entries.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/AppCard.tsx",
-        "frontend/src/components/Footer.tsx",
-        "frontend/src/components/GameCard.tsx",
-        "frontend/src/components/HackCard.tsx",
-        "frontend/src/components/HeroSection.tsx",
-        "frontend/src/components/Navigation.tsx",
-        "frontend/src/components/SectionCardGrid.tsx",
-        "frontend/src/components/ShowCard.tsx",
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
+        "frontend/src/components/GamesSection.tsx"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -26,16 +16,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-20"
+        "REQ-27"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-update-the-homepage-section-card-grid-to-include-all-7-sections-visible-across-the-uploaded-edurocks-screenshots-games-proxy-movies-tv-music-apps-hacks-and-live-tv-each-represented-as-a-large-2-column-card-with-a-neon-blue-rounded-square-icon-emoji-fallback-acceptable-a-bold-title-and-a-short-descriptive-subtitle-clicking-a-card-should-smooth-scroll-to-the-corresponding-section-on-the-page",
-      "featureTitle": "Update the homepage section card grid to include all 7 sections visible across the uploaded EDUrocks screenshots — Games, Proxy, Movies & TV, Music, Apps, Hacks, and Live TV — each represented as a large 2-column card with a neon blue rounded-square icon (emoji fallback acceptable), a bold title, and a short descriptive subtitle. Clicking a card should smooth-scroll to the corresponding section on the page.",
+      "featureId": "feature-update-showssection-tsx-to-handle-and-display-the-expanded-list-of-100-shows-movies-update-the-hardcoded-fallback-shows-array-in-showssection-tsx-to-mirror-the-full-100-entry-backend-list-ensure-the-responsive-grid-layout-renders-correctly-with-the-larger-dataset-consider-adding-a-search-filter-input-or-genre-filter-badges-the-existing-videoplayer-modal-must-remain-functional-for-all-show-movie-entries",
+      "featureTitle": "Update ShowsSection.tsx to handle and display the expanded list of 100 shows/movies. Update the hardcoded fallback shows array in ShowsSection.tsx to mirror the full 100-entry backend list. Ensure the responsive grid layout renders correctly with the larger dataset — consider adding a search/filter input or genre filter badges. The existing VideoPlayer modal must remain functional for all show/movie entries.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/SectionCardGrid.tsx"
+        "frontend/src/components/ShowsSection.tsx"
       ],
       "components": [
         "blob-storage@4.0.0",
@@ -46,71 +35,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-21"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-new-music-section-to-the-page-anchor-id-music-display-a-grid-of-embedded-music-radio-player-cards-featuring-at-least-6-publicly-accessible-music-or-internet-radio-stream-embeds-e-g-lofi-girl-youtube-live-stream-somafm-radiogarden-nts-radio-bbc-radio-1-kexp-each-card-shows-a-neon-blue-styled-icon-badge-station-stream-name-a-short-description-and-a-play-listen-button-that-loads-the-embed-in-an-iframe-overlay-or-inline-player-style-the-section-header-with-neon-blue-glow-text-matching-the-new-edurocks-inspired-theme",
-      "featureTitle": "Add a new Music section to the page (anchor id='music'). Display a grid of embedded music/radio player cards featuring at least 6 publicly accessible music or internet radio stream embeds (e.g., Lofi Girl YouTube live stream, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP). Each card shows a neon blue styled icon badge, station/stream name, a short description, and a Play/Listen button that loads the embed in an iframe overlay or inline player. Style the section header with neon blue glow text matching the new EDUrocks-inspired theme.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/MusicCard.tsx",
-        "frontend/src/components/MusicPlayer.tsx",
-        "frontend/src/components/MusicSection.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-22"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-new-live-tv-section-to-the-page-anchor-id-livetv-display-a-grid-of-at-least-6-publicly-accessible-live-tv-channel-embeds-e-g-nasa-tv-abc-news-live-cbs-news-bloomberg-tv-dw-news-france-24-all-of-which-offer-free-public-youtube-live-embeds-or-direct-iframe-embeds-each-card-shows-a-neon-blue-icon-badge-channel-name-short-description-and-a-watch-live-button-that-loads-the-channel-embed-in-an-iframe-overlay-style-the-section-header-with-neon-blue-glow-text",
-      "featureTitle": "Add a new Live TV section to the page (anchor id='livetv'). Display a grid of at least 6 publicly accessible live TV channel embeds (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24 — all of which offer free public YouTube live embeds or direct iframe embeds). Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button that loads the channel embed in an iframe overlay. Style the section header with neon blue glow text.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/LiveTVCard.tsx",
-        "frontend/src/components/LiveTVPlayer.tsx",
-        "frontend/src/components/LiveTVSection.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-23"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-navigation-bar-to-include-links-to-all-7-sections-in-this-order-games-proxy-movies-tv-music-apps-hacks-live-tv-update-the-herosection-cta-buttons-and-or-the-homepage-section-card-grid-to-link-to-all-7-sections-ensure-the-mobile-hamburger-menu-also-lists-all-7-links-and-active-section-highlighting-uses-neon-blue-for-the-selected-link",
-      "featureTitle": "Update the Navigation bar to include links to all 7 sections in this order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV. Update the HeroSection CTA buttons and/or the homepage section card grid to link to all 7 sections. Ensure the mobile hamburger menu also lists all 7 links and active section highlighting uses neon blue for the selected link.",
-      "files": [
-        "frontend/src/components/HeroSection.tsx",
-        "frontend/src/components/Navigation.tsx"
-      ],
-      "components": [
-        "blob-storage@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-24"
+        "REQ-28"
       ],
       "confidence": "high"
     }

@@ -1,184 +1,43 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "EDUrocks-style UI redesign with neon blue theme + Music and Live TV sections",
+  "title": "Expand Games and Movies/TV Sections to 100 Entries Each",
   "requirements": [
     {
-      "id": "REQ-20",
-      "summary": "Redesign entire site UI to match EDUrocks layout with dark maroon/near-black background and neon blue (#00bfff) accents replacing all green/cyan colors",
+      "id": "REQ-27",
+      "summary": "Update GamesSection.tsx to display 100 games with search/filter UI and maintain GamePlayer modal functionality",
       "acceptanceCriteria": [
-        "Background color is a dark maroon/near-black tone matching the EDUrocks screenshots",
-        "All accent colors (icon badges, borders, glow, buttons, active nav links) use neon blue (#00bfff or equivalent)",
-        "Homepage displays a 2-column grid of large section cards, each with a rounded-square icon badge, title, and description",
-        "Card layout is responsive: single column on mobile, 2-column on tablet/desktop",
-        "Navigation, HeroSection, and Footer all use the neon blue accent color",
-        "No remnants of neon green or cyan accent colors remain"
+        "GamesSection displays all 100 game entries in the responsive grid",
+        "The fallback hardcoded list in GamesSection.tsx contains at least 100 games matching the backend data",
+        "A search or genre filter UI element is present to help browse 100+ games",
+        "Clicking Play Now on any game opens the GamePlayer modal with the correct embed URL",
+        "Grid layout remains visually consistent with the existing neon blue EDUrocks theme",
+        "No game cards overflow or break the layout"
       ],
       "file_operations": [
         {
-          "path": "frontend/tailwind.config.js",
+          "path": "frontend/src/components/GamesSection.tsx",
           "operation": "modify",
-          "description": "Update Tailwind config to define the dark maroon/near-black background color (#1a0a1a or #0f0a14) and neon blue accent (#00bfff) as custom theme colors, replacing existing neon green/cyan definitions. Update the color palette to use these new values consistently across primary, accent, and glow utilities."
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Update the global CSS custom properties to use the dark maroon/near-black background and neon blue accent throughout. Replace all OKLCH color values for --primary, --accent, and glow-related variables to match the EDUrocks color scheme. Ensure dark theme is the default."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Restructure the homepage layout to display a 2-column responsive card grid as the primary content area below HeroSection. Create a new SectionCardGrid component that displays all 7 section cards (Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV) with large rounded-square icon badges, bold titles, and descriptions. Wire smooth-scroll navigation to each section anchor. Apply dark maroon/near-black background styling."
-        },
-        {
-          "path": "frontend/src/components/SectionCardGrid.tsx",
-          "operation": "create",
-          "description": "Create a new component that renders a 2-column responsive grid (1 column on mobile, 2 on tablet/desktop) of large section cards matching the EDUrocks layout. Each card shows a neon blue rounded-square icon badge (using emoji or Lucide icons), a bold section title, and a short description. Clicking a card triggers smooth-scroll to the matching section anchor. Style with dark maroon background, neon blue accents, and hover effects with blue glow borders."
-        },
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Update Navigation to use neon blue (#00bfff) for active link highlighting and hover states, replacing any green/cyan. Ensure the component matches the EDUrocks header style with proper spacing and the dark maroon background."
-        },
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Update HeroSection to use neon blue accents for the gradient orbs, glow effects, and CTA buttons. Replace all green/cyan colors with neon blue. Adjust background to complement the dark maroon/near-black theme. Update CTA button styling to match the EDUrocks design."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update Footer to use neon blue for link hover states and accent elements, replacing any green/cyan. Ensure it matches the dark maroon/near-black background and overall EDUrocks aesthetic."
-        },
-        {
-          "path": "frontend/src/components/GameCard.tsx",
-          "operation": "modify",
-          "description": "Update GameCard styling to use neon blue for the genre badge background, hover border glow, and button accents. Ensure rounded-square icon badges use neon blue backgrounds. Replace all green/cyan accent colors."
-        },
-        {
-          "path": "frontend/src/components/ShowCard.tsx",
-          "operation": "modify",
-          "description": "Update ShowCard styling to use neon blue for the badge background, hover border glow, and 'Watch Now' button. Ensure rounded-square thumbnails have neon blue accents. Replace all green/cyan colors."
-        },
-        {
-          "path": "frontend/src/components/AppCard.tsx",
-          "operation": "modify",
-          "description": "Update AppCard to use neon blue for the emoji icon badge background, hover effects, and 'Open App' button. Replace color-coded accents with consistent neon blue theming to match EDUrocks style."
-        },
-        {
-          "path": "frontend/src/components/HackCard.tsx",
-          "operation": "modify",
-          "description": "Update HackCard to use neon blue for category badge backgrounds and hover glow effects, replacing the multi-color category system with consistent neon blue accents matching the EDUrocks theme."
+          "description": "Expand the hardcoded fallback games array to 100 total entries with diverse genres (action, puzzle, arcade, racing, strategy, IO, platformer, sports, shooter, idle, etc.). Add a search input field above the games grid that filters games by title in real-time. Add genre filter badges (clickable buttons) for at least 8 genre categories to help users browse the expanded catalog. Ensure the responsive grid layout (existing grid styling) handles 100 cards without breaking. Maintain the existing GamePlayer modal integration so clicking Play Now on any game card opens the modal with the correct embedUrl. Retain the existing neon blue theme styling and card hover effects."
         }
       ]
     },
     {
-      "id": "REQ-21",
-      "summary": "Update homepage section card grid to include all 7 sections (Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV) with smooth-scroll navigation",
+      "id": "REQ-28",
+      "summary": "Update ShowsSection.tsx to display 100 shows/movies with search/filter UI and maintain VideoPlayer modal functionality",
       "acceptanceCriteria": [
-        "Homepage card grid shows exactly 7 section cards: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV",
-        "Each card has a neon blue rounded-square icon badge, bold title, and short subtitle description",
-        "Clicking any card smooth-scrolls to the matching section anchor",
-        "Cards are arranged in a 2-column grid matching the EDUrocks layout"
+        "ShowsSection displays all 100 show/movie entries in the responsive grid",
+        "The fallback hardcoded list in ShowsSection.tsx contains at least 100 entries matching the backend data",
+        "A search or genre filter UI element is present to help browse 100+ titles",
+        "Clicking Watch Now on any entry opens the VideoPlayer modal with the correct YouTube embed URL",
+        "Grid layout remains visually consistent with the existing neon blue EDUrocks theme",
+        "No show cards overflow or break the layout"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/SectionCardGrid.tsx",
+          "path": "frontend/src/components/ShowsSection.tsx",
           "operation": "modify",
-          "description": "Define hardcoded data for all 7 section cards with matching anchor IDs, titles, descriptions, and emoji/icon representations: Games (#games), Proxy (#proxy), Movies & TV (#shows), Music (#music), Apps (#apps), Hacks (#hacks), Live TV (#livetv). Implement smooth-scroll onClick handlers that navigate to each section anchor. Ensure the 2-column responsive grid layout matches the EDUrocks screenshots."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Ensure the SectionCardGrid is positioned prominently on the homepage below the HeroSection and that all section components (GamesSection, ProxySection, ShowsSection, MusicSection, AppsSection, HacksSection, LiveTVSection) have the correct anchor IDs matching the card grid navigation targets."
-        }
-      ]
-    },
-    {
-      "id": "REQ-22",
-      "summary": "Add new Music section with at least 6 embedded music/radio stream cards featuring Play/Listen buttons and iframe overlay player",
-      "acceptanceCriteria": [
-        "A Music section exists on the page with anchor id='music'",
-        "At least 6 music/radio stream cards are displayed in a responsive grid",
-        "Each card shows a neon blue icon badge, stream name, short description, and a Listen/Play button",
-        "Clicking the button loads the stream embed in an iframe overlay or inline player",
-        "Section header uses neon blue glow styling matching the site theme"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/MusicSection.tsx",
-          "operation": "create",
-          "description": "Create a new MusicSection component with anchor id='music'. Display a responsive grid of at least 6 hardcoded music/radio stream cards (e.g., Lofi Girl YouTube live stream, SomaFM, RadioGarden, NTS Radio, BBC Radio 1, KEXP). Each card shows a neon blue rounded-square icon badge (music note emoji), station name, short description, and a 'Listen' button. Implement an iframe overlay modal (similar to GamePlayer/VideoPlayer pattern) that loads the stream URL when a card is clicked. Style the section header with neon blue glow text. Use publicly accessible YouTube live stream embeds or direct radio stream URLs."
-        },
-        {
-          "path": "frontend/src/components/MusicCard.tsx",
-          "operation": "create",
-          "description": "Create a presentational MusicCard component that displays a single music/radio stream entry with a neon blue icon badge, station name, short description, and a 'Listen' button. Style with dark maroon background, neon blue accents, hover glow effects, and rounded corners matching the EDUrocks card aesthetic. Accept an onPlay callback prop."
-        },
-        {
-          "path": "frontend/src/components/MusicPlayer.tsx",
-          "operation": "create",
-          "description": "Create a MusicPlayer modal component (similar to GamePlayer and VideoPlayer) that displays a full-screen or large overlay with an embedded iframe for the selected music/radio stream. Include a header with the stream name, an open-in-new-tab button, and a close/Escape button. Style with dark maroon background and neon blue accents. Support Escape key and backdrop click to close."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the MusicSection component in the main App layout between ShowsSection and AppsSection, ensuring it has the anchor id='music' for smooth-scroll navigation."
-        }
-      ]
-    },
-    {
-      "id": "REQ-23",
-      "summary": "Add new Live TV section with at least 6 publicly accessible live TV channel embeds and iframe overlay player",
-      "acceptanceCriteria": [
-        "A Live TV section exists on the page with anchor id='livetv'",
-        "At least 6 live TV channel cards are displayed in a responsive grid",
-        "Each card shows a neon blue icon badge, channel name, short description, and a Watch Live button",
-        "Clicking the button loads the live channel embed in an iframe overlay",
-        "Section header uses neon blue glow styling matching the site theme"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/LiveTVSection.tsx",
-          "operation": "create",
-          "description": "Create a new LiveTVSection component with anchor id='livetv'. Display a responsive grid of at least 6 hardcoded live TV channel cards (e.g., NASA TV, ABC News Live, CBS News, Bloomberg TV, DW News, France 24 — all using free public YouTube live embeds or direct iframe URLs). Each card shows a neon blue rounded-square icon badge (TV emoji), channel name, short description, and a 'Watch Live' button. Implement an iframe overlay modal that loads the channel embed when clicked. Style the section header with neon blue glow text."
-        },
-        {
-          "path": "frontend/src/components/LiveTVCard.tsx",
-          "operation": "create",
-          "description": "Create a presentational LiveTVCard component that displays a single live TV channel entry with a neon blue icon badge, channel name, short description, and a 'Watch Live' button. Style with dark maroon background, neon blue accents, hover glow effects, and rounded corners matching the EDUrocks aesthetic. Accept an onWatch callback prop."
-        },
-        {
-          "path": "frontend/src/components/LiveTVPlayer.tsx",
-          "operation": "create",
-          "description": "Create a LiveTVPlayer modal component (similar to VideoPlayer and GamePlayer) that displays a full-screen or large overlay with an embedded iframe for the selected live TV channel. Include a header with the channel name, an open-in-new-tab button, and a close/Escape button. Style with dark maroon background and neon blue accents. Support Escape key and backdrop click to close."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the LiveTVSection component in the main App layout after HacksSection and before Footer, ensuring it has the anchor id='livetv' for smooth-scroll navigation."
-        }
-      ]
-    },
-    {
-      "id": "REQ-24",
-      "summary": "Update Navigation bar and HeroSection to include links to all 7 sections (Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV) with neon blue active highlighting",
-      "acceptanceCriteria": [
-        "Navigation bar shows links to: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV",
-        "Mobile hamburger menu includes all 7 navigation links",
-        "Active section link is highlighted with neon blue accent",
-        "HeroSection or homepage card grid provides access to all 7 sections"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Update the navigation links array to include all 7 sections in order: Games, Proxy, Movies & TV, Music, Apps, Hacks, Live TV. Update the anchor hrefs to match: #games, #proxy, #shows, #music, #apps, #hacks, #livetv. Ensure both desktop and mobile hamburger menu render all 7 links. Confirm active section highlighting uses neon blue accent color."
-        },
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Update the CTA buttons to link to all 7 sections or ensure the SectionCardGrid (wired in REQ-21) provides access to all 7. If CTA buttons are used, add or update them to include Music and Live TV alongside existing section links. Ensure neon blue styling for all buttons."
+          "description": "Expand the hardcoded fallback shows array to 100 total entries with diverse genres (drama, comedy, action, thriller, sci-fi, anime, documentary, horror, romance, crime, fantasy, etc.) and a mix of TV shows and movies. Add a search input field above the shows grid that filters titles by name in real-time. Add genre filter badges (clickable buttons) for at least 8 genre categories to help users navigate the expanded catalog. Ensure all embedUrl values follow the YouTube embed format (https://www.youtube.com/embed/<videoId>). Maintain the responsive grid layout to handle 100 cards without visual breakage. Preserve the existing VideoPlayer modal integration so clicking Watch Now opens the modal with the correct embed URL. Retain the existing neon blue theme styling and card hover effects."
         }
       ]
     }

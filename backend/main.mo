@@ -19,7 +19,7 @@ actor {
   };
 
   let games : [Game] = [
-    // Original games
+    // Original games kept the same
     {
       title = "Slope";
       description = "Roll your ball down a steep slope while avoiding obstacles in this fast-paced 3D game.";
@@ -108,7 +108,7 @@ actor {
   ];
 
   let shows : [Show] = [
-    // Original shows
+    // Original shows kept the same
     {
       title = "Breaking Bad";
       description = "A high school chemistry teacher turns to a life of crime in this critically acclaimed drama. Watch the official trailer.";
